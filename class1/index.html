@@ -1,0 +1,1362 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Class 1 | SAVI 780</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@0.7.7/dist/leaflet.css" />
+
+        <style>
+            #final-map {
+                height: 600px;
+                width: 1000px;
+            }
+        </style>
+
+        <script src="//code.jquery.com/jquery-2.2.0.min.js"></script>
+        <script src="https://unpkg.com/leaflet@0.7.7/dist/leaflet.js"></script>
+        <script src="https://stamen-maps.a.ssl.fastly.net/js/tile.stamen.js"></script>
+
+        <script src="bids.geojson"></script>
+        <script src="js/map.js"></script>
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 1</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>Introduction to Interactive Web Mapping, Programming and Design</h1>
+            <p>Class 1</p>
+        </div>
+
+        <div class="slide">
+            <h2>syllabus</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html.jpg);">
+            <h2>Week 1</h2>
+            <h2>HTML</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/js-for-cats.png);">
+            <h2>Week 2</h2>
+            <h2>CSS and JavaScript</h2>
+            <a class="source" href="http://jsforcats.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/js-for-cats.png);">
+            <h2>Week 3</h2>
+            <h2>More JavaScript</h2>
+            <a class="source" href="https://leafletjs.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.jpg);">
+            <h2>Week 4</h2>
+            <h2>Leaflet; Mapbox</h2>
+            <a class="source" href="https://www.mapbox.com/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Week 5</h2>
+            <h2>Data; Current Web Development Practices</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Week 6</h2>
+            <h2>Open: TBD</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Week 7</h2>
+            <h2>Presentations</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Class homepage</h2>
+            <p><a target="_blank" href="http://pratt-savi-780.github.io/materials-spring2019">pratt-savi-780.github.io/materials-spring2019</a></p>
+        </div>
+
+        <div class="slide">
+            <h2>Come to class on time. If you're not going to be, email me.</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Assignments will be posted on the class homepage</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Do assignments on time or lose 25% credit</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Assessment</h2>
+            <ul>
+                <li>50% assignments +</li>
+                <li>40% projects +</li>
+                <li>10% attendance</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <h2>Emailing me</h2>
+            <p>Personal: email me directly</p>
+            <p>About an assignment: email the Google Group (<a href="https://groups.google.com/forum/#!forum/savi802-spring2019">savi802-spring2019@googlegroups.com</a>)</p>
+        </div>
+
+        <div class="slide">
+            <h2>Email</h2>
+            <p>Please use descriptive subject lines</p>
+            <p>Please include links to relevant data and sites</p>
+        </div>
+
+        <div class="slide">
+            <h2>maps that I've made</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a class="source" href="http://livinglotsnyc.org/">living lots nyc</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/curb-your-litter.png);">
+            <a class="source" href="http://map.curbyourlitter.org/">curb your litter</a>
+        </div>
+
+        <div class="slide">
+            <h1>Refreshers</h1>
+        </div>
+
+        <div class="slide">
+            <h2>GIS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Geographic Information System</h2>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+            <p>
+                "Any system for capturing, storing, checking, and displaying data related to positions on the Earth's surface"
+            </p>
+            <a class="source" href="https://www.nationalgeographic.org/encyclopedia/geographic-information-system-gis/">source</a>
+        </div>
+
+        <div class="slide">
+            <h1>GIS</h1>
+            <p>
+                "In a GIS, you connect <strong>data</strong> with <strong>geography</strong>."
+            </p>
+            <a class="source" style="bottom: 70px;" href="https://gisgeography.com/what-gis-geographic-information-systems/">gisgeography.com</a>
+            <a class="source" href="http://www.datapolitan.com/DOT_GIS/20160610_Intermediate_GIS/#41">datapolitan</a>
+        </div>
+
+        <div class="slide">
+            <h2>GISs</h2>
+            <img src="img/arcgis.png" style="max-width: 25%;" />
+        </div>
+
+        <div class="slide">
+            <h2>GISs</h2>
+            <img src="img/arcgis.png" style="max-width: 25%;" />
+            <a href="http://qgis.org">
+                <img src="img/qgis.png" style="max-width: 25%;" />
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>latitude and longitude</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/latitude_longitude.jpg);">
+            <h2>latitude and longitude</h2>
+            <a class="source" href="http://www.justtrails.com/nav-skills/navigation-skills-latitude-and-longitude/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>raster vs vector</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/satellite_imagery.jpg);">
+            <h2>raster</h2>
+            <a class="source" href="http://en.wikipedia.org/wiki/Riga">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/map_tile.png);">
+            <h2>raster</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/weather_map.png);">
+            <h2>raster</h2>
+            <a class="source" href="https://www.mapbox.com/blog/hi-res-temperature-map-forecast-io/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nola_parcels.png);">
+            <h2>vector</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nola_parcels_selected.png);">
+            <h2>vector</h2>
+        </div>
+
+        <div class="slide">
+            <h1>Introduction to webmaps</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto-js-example-2.png);">
+            <a class="source" href="http://bl.ocks.org/michellemho/raw/908cd41629e74d2e7f091763d2e9ded6/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/readings-atlas-redistricting.png);">
+            <a class="source" href="https://projects.fivethirtyeight.com/redistricting-maps/">Atlas of Redistricting</a>
+        </div>
+
+        <div class="slide">
+            <h2>webmaps</h2>
+            <p>maps on the internet + the practices and software that get them there</p>
+        </div>
+
+        <div class="slide">
+            <h2>"practices and software"</h2>
+        </div>
+
+        <div class="slide">
+            <h2>platforms for working with maps and data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>(open) data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>adding spatial data to otherwise non-spatial artifacts</h2>
+            <p>(eg, geotagging of pictures on a service like flickr, adding location to tweets, etc)</p>
+        </div>
+
+        <div class="slide">
+            <h2>"practices and software"</h2>
+            <ul>
+                <li>platforms for working with maps and data</li>
+                <li>(open) data</li>
+                <li>adding spatial data to otherwise non-spatial artifacts</li>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/streetview.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/floatingsheep_twitterbeerchurch.jpg);">
+            <a class="source" href="http://www.floatingsheep.org/2012/07/church-or-beer-americans-on-twitter.html">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn0.png);">
+            <a class="source" href="http://datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn1.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn2.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/datawovn0.png);">
+            <a class="source" href="http://www.datawovn.com/#!San_Francisco_Private_Shuttles">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>How did we get here?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>first web maps were static</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapquest.png);">
+            <a class="source" href="http://web.archive.org/web/19971211230909/http://www.mapquest.com/">
+                Mapquest via the Wayback Machine, circa 1997
+            </a>
+        </div>
+
+        <div class="slide">
+            <div class="left">
+                <img class="small" src="img/mapquest_map.jpg" />
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="slide">
+            <div class="left">
+                <img class="small" src="img/mapquest_map.jpg" />
+            </div>
+            <div class="right">
+                <p>click</p>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="slide">
+            <div class="left">
+                <img class="small" src="img/mapquest_map.jpg" />
+            </div>
+            <div class="right">
+                <p>click</p>
+                <p style="margin-top: 50px; margin-bottom: 25px;">...wait</p>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="slide">
+            <div class="left">
+                <img class="small" src="img/mapquest_map.jpg" />
+            </div>
+            <div class="right">
+                <p>click</p>
+                <p style="margin-top: 50px; margin-bottom: 25px;">...wait</p>
+                <p>entire page reloads,</p>
+                <p>map is panned east</p>
+            </div>
+            <div style="clear: both;"></div>
+        </div>
+
+        <div class="slide">
+            <h2>static online maps are often indistinguishable from paper maps</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/fcwa.jpg);">
+            <a class="source" href="http://foodchainworkers.org/?page_id=2443">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>What has changed since 1997?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>~1997 - today</h2>
+            <ol style="list-style: decimal outside; padding-left: 50px;">
+                <li>GPS</li>
+                <li>the web changed</li>
+                <li>more data became available</li>
+                <li>FOSS became mainstream</li>
+            <ol>
+        </div>
+
+        <div class="slide">
+            <h2>1. GPS</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_recievers.jpg);">
+            <a class="source" href="http://en.wikipedia.org/wiki/GPS_navigation_device">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gps_satellites_reading.png);">
+            <a class="source" href="http://en.wikipedia.org/wiki/Dilution_of_precision_(GPS)">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>GPS "selective availablility" turned off (2000)</h2>
+        </div>
+
+        <div class="slide lonely" style="background-image: url(img/gps-sa-noaa.png);">
+            <a class="source" href="http://www.gps.gov/systems/gps/modernization/sa/data/">gps.gov</a>
+        </div>
+
+        <div class="slide lonely" style="background-image: url(img/gps-sa-schlaggo.gif);">
+            <a class="source" href="http://www.schlaggo.de/gps/">schlaggo.de</a>
+        </div>
+
+        <div class="slide">
+            <h2>2. the web has changed</h2>
+        </div>
+
+        <div class="slide">
+            <h2>"Web 2.0" (~2004)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tim_oreilly.jpg);">
+            <h2>Tim O'Reilly</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/oreilly_books.png);">
+            <a class="source" href="http://shop.oreilly.com/category/get/data-science-kit.do">
+                shop.oreilly.com
+            </a>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+                <li>publishing &rarr;  participation (podcasting, blogging, etc)</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+                <li>publishing &rarr;  participation</li>
+            </ul>
+            <div style="margin-top: 100px;">
+                <a href="http://oreilly.com/web2/archive/what-is-web-20.html">
+                    What is Web 2.0
+                </a> (2005)
+            </div>
+        </div>
+
+        <div class="slide">
+            <ul>
+                <li>Britannica Online &rarr; Wikipedia</li>
+                <li>publishing &rarr;  participation</li>
+            </ul>
+            <div style="margin-top: 100px;">
+                <a href="http://oreilly.com/web2/archive/what-is-web-20.html">
+                    What is Web 2.0
+                </a> (2005)
+            </div>
+            <div>...</div>
+            <div>desktop GIS &rarr; geoweb</div>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX (2005)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/search.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>AJAX</h2>
+            <p>(Asynchronous Javascript and XML)</p>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX</h2>
+            <p style="text-decoration: line-through;">(Asynchronous Javascript and XML)</p>
+            <p>dynamically loading portions of webpages</p>
+        </div>
+
+        <div class="slide">
+            <h2>AJAX</h2>
+            <p>not really new, but newly articulated</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/internet-population.png);">
+            <a class="source" href="http://www.internetlivestats.com/internet-users/">
+                source
+            </a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/internet_speeds.png);">
+            <a class="source" href="http://www.webpronews.com/the-internet-was-kind-of-terrible-in-2002-infographic-2012-08">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>3. data becomes more available</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide">
+            <h2>open data</h2>
+            <p>data that is:
+                <ul style="list-style: disc outside; padding-left: 50px;">
+                    <li>accessible (online, in a widely-used format)</li>
+                    <li>licensed freely</li>
+                    <li>usually created by a large entity</li>
+                </ul>
+            </p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open_data_ipis.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/data-portals-org.png);">
+            <a class="source" href="http://dataportals.org/search">dataportals.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <h1>How do we give data back?</h1>
+        </div>
+
+        <div class="slide">
+            <h2>collaborative data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/osm-id.gif);">
+            <a class="source" href="https://www.mapbox.com/blog/id-for-openstreetmap-reaches-beta-1/">OpenStreetMap's iD editor</a>
+        </div>
+
+        <div class="slide">
+            <p>Haiti in OpenStreetMap before 2010 earthquake</p>
+            <img src="img/haiti1.png" />
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <p>Haiti in OpenStreetMap after 2010 earthquake</p>
+            <img src="img/haiti2.png" />
+            <a class="source" href="http://brainoff.com/weblog/2010/01/14/1518">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>4. open source</h2>
+        </div>
+
+        <div class="slide">
+            <h2>Free and open source software (FOSS)</h2>
+        </div>
+
+        <div class="slide lonely">
+            <h2>freedoms to</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>use,</li>
+                <li>study,</li>
+                <li>modify, and</li>
+                <li>redistribute</li>
+            </ul>
+            <p>source code</p>
+        </div>
+
+        <div class="slide lonely" style="background-image: url(img/source-code.png);">
+            <h2>source code</h2>
+        </div>
+
+        <div class="slide lonely">
+            <h2>in exchange for</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>attribution</li>
+            </ul>
+        </div>
+
+        <div class="slide lonely">
+            <h2>in exchange for</h2>
+            <ul style="list-style: disc outside; padding-left: 50px;">
+                <li>attribution, and sometimes</li>
+                <li>sharing your changes under the same license</li>
+            </ul>
+        </div>
+
+        <div class="slide lonely">
+            <h2>backed by licenses</h2>
+        </div>
+
+        <div class="slide lonely" style="background-image: url(img/mit-license.png);">
+            <h2>backed by licenses</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/coding_freedom.png);">
+            <a class="source" href="http://codingfreedom.com/">
+                source
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>~1997 - today</h2>
+            <ol style="list-style: decimal outside; padding-left: 50px;">
+                <li>GPS</li>
+                <li>the web changed</li>
+                <li>more data became available</li>
+                <li>FOSS became mainstream</li>
+            <ol>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Anatomy of a web map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-0.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-1.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-2.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-3.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-4.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>1. Make or reuse base <strong>tiles</strong></h2>
+        </div>
+
+        <div class="slide">
+            <h2>Street, water and land data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tile.png);">
+            <h2>Street, water and land data &rarr;</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a class="source" href="http://openwhatevermap.xyz/#3/21.94/-4.92">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide">
+            <a href="http://maptime.github.io/anatomy-of-a-web-map/#45">
+                How do tiles work?
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>2. Overlay some data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/database.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/bids.png);">
+        </div>
+
+        <div class="slide">
+            <h2>3. Mix with some html, css, and javascript for styles and interactivity</h2>
+        </div>
+
+        <div class="slide">
+            <div id="final-map"></div>
+        </div>
+
+        <div class="slide">
+            <p>1. Make or reuse <strong>base tiles</strong></p>
+            <p>2. <strong>Overlay data</strong></p>
+            <p>3. Mix with some <strong>html</strong>, <strong>css</strong>,
+            and <strong>javascript</strong></p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-4.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cat-high-five.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/cat-high-five.gif);">
+            <h2>You can do this!</h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>HTML</h2>
+            <p>defines the <strong>structure</strong> of a page, loads other bits</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html.png);">
+            <h2>HTML</h2>
+        </div>
+
+        <div class="slide">
+            <h2>CSS</h2>
+            <p>adds <strong>style</strong> to parts of a page</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/css.png);">
+            <h2>CSS</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript</h2>
+            <p>makes web pages <strong>dynamic</strong> (eg AJAX)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_foursquare.gif);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/js.png);">
+            <h2>JavaScript</h2>
+        </div>
+
+        <div class="slide">
+            <p>your browser loads the <strong>HTML</strong>, which tells it which <strong>CSS</strong> and <strong>JavaScript</strong> files to get (if any)</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/devtools_loading.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>if you want something to be online, it has to be on a server somewhere</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/neocities.png);">
+            <h2>neocities.org</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/github-pages.png);">
+            <h2 style="margin-top: 350px;">pages.github.com</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/glitch.png);">
+            <h2>glitch</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>HTML</h1>
+            <h2>HyperText Markup Language</h2>
+        </div>
+
+        <div class="slide">
+            <h1>HTML</h1>
+            <h2>HyperText Markup Language</h2>
+            <h2>(text with links)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/arpanet-1.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arpanet-2.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/arpanet-3.jpg);">
+            <a href="http://www.vox.com/a/internet-maps" class="source">vox</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gopher.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/gopherSelect.gif);">
+            <a href="http://web.stanford.edu/group/ritspub/Documents/MacTools/gopher.html" class="source">Stanford</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/berners_lee.jpg);">
+            <h2 style="position: absolute; bottom: 100px; left: 25px;">
+                <a href="http://en.wikipedia.org/wiki/Tim_Berners-Lee">Tim Berners-Lee</a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html_rfc1.png);">
+            <h2 style="margin-top: 35%;">
+                <a href="http://www.w3.org/MarkUp/draft-ietf-iiir-html-01.txt">
+                    The original RFC (standard) for HTML
+                </a>
+            </h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/berners-lee-web-developer.png);">
+            <a class="source" href="https://twitter.com/MSalt69/status/476684833221926912/photo/1">
+                twitter
+            </a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>HTML defines the <em>content</em> of web pages</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML tells the browser what to put on the page</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML isn't going to help you make things look nice</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML isn't going to help you make things look nice</h2>
+            <p>(we'll talk about <strong>CSS</strong> soon)</p>
+        </div>
+
+        <div class="slide">
+            <h2>HTML isn't usually going to allow for interactivity</h2>
+        </div>
+
+        <div class="slide">
+            <h2>HTML isn't usually going to allow for interactivity</h2>
+            <p>(we'll talk about <strong>JavaScript</strong> soon)</p>
+        </div>
+
+        <div class="slide">
+            <h2>every HTML page starts out the same way:</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">Content to show on the</span>
+        <span class="highlighted">page goes here!</span>
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <code>&lt;!doctype html&gt;</code>
+        </div>
+
+        <div class="slide">
+            <code>&lt;!doctype html&gt;</code>
+            <h2>tells the browser, "get ready, I'm about to start speaking HTML"</h2>
+        </div>
+
+        <div class="slide">
+            <code>&lt;html&gt;</code>
+        </div>
+
+        <div class="slide">
+            <code>&lt;html&gt;</code>
+            <h2>tells the browser, "okay, this is the beginning of the HTML"</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;head&gt;
+&lt;/head&gt;</code></pre>
+            <h2>things we'll get to later (styles and scripts) go between these</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;
+&lt;/body&gt;</code></pre>
+            <h2>page content goes between these</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;/html&gt;</code></pre>
+            <h2>tells the browser, "this is the end of the HTML"</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;</code></pre>
+            <p>
+                the body <strong>opening tag</strong>
+            </p>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;</code></pre>
+            <p>
+                the body <strong>opening tag</strong>
+            </p>
+            <p>
+                opening tags always start with
+            </p>
+            <code>&lt;</code>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;</code></pre>
+            <p>
+                the body <strong>opening tag</strong>
+            </p>
+            <p>
+                opening tags always start with
+            </p>
+            <code>&lt;</code>
+            <p>and end with</p>
+            <code>&gt;</code>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;/body&gt;</code></pre>
+            <p>the body <strong>closing tag</strong></p>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;/body&gt;</code></pre>
+            <p>the body <strong>closing tag</strong></p>
+            <p>closing tags always start with</p>
+            <code>&lt;/</code>
+            <p>and end with</p>
+            <code>&gt;</code>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;
+            Text goes here
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        &lt;p&gt;
+            Text&lt;br /&gt;
+            goes here
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;p&gt;
+    Text goes &lt;em&gt;here&lt;/em&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;p&gt;
+    Text goes &lt;strong&gt;here&lt;/strong&gt;
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;a&gt;
+    This should be a link
+&lt;/a&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 40px;"><code>&lt;a href="<span class="highlighted">http://example.com/awesome/page</span>"&gt;
+    This should be a link
+&lt;/a&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;img src="" /&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>Looking at other people's pages</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/view_source.png);">
+            <h2>view source</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/developer_tools.png);">
+            <h2>developer tools</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;eggs&lt;/li&gt;
+    &lt;li&gt;milk&lt;/li&gt;
+    &lt;li&gt;bread&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;ul&gt;
+    &lt;li&gt;eggs&lt;/li&gt;
+    &lt;li&gt;milk&lt;/li&gt;
+    &lt;li&gt;bread&lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+            <ul style="list-style: disc outside;">
+                <li>eggs</li>
+                <li>milk</li>
+                <li>bread</li>
+            </ul>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;one&lt;/li&gt;
+    &lt;li&gt;two&lt;/li&gt;
+    &lt;li&gt;three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;ol&gt;
+    &lt;li&gt;one&lt;/li&gt;
+    &lt;li&gt;two&lt;/li&gt;
+    &lt;li&gt;three&lt;/li&gt;
+&lt;/ol&gt;</code></pre>
+            <ol style="list-style: number outside;">
+                <li>one</li>
+                <li>two</li>
+                <li>three</li>
+            </ol>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;div&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-structure-header.png);">
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;div <span class="highlighted">id="header"</span>&gt;
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;div id="header"&gt;
+    <i>logo
+    etc</i>
+&lt;/div&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;span&gt;&lt;/span&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;input /&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;input type="<span class="highlighted">text</span>" /&gt;</code></pre>
+            <input style="font-size: 50px;" type="text" />
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;input type="<span class="highlighted">checkbox</span>" /&gt;</code></pre>
+            <div>
+                <input type="checkbox" /> yes
+            </div>
+            <div>
+                <input type="checkbox" /> no
+            </div>
+            <div>
+                <input type="checkbox" /> maybe
+            </div>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;input type="<span class="highlighted">radio</span>" /&gt;</code></pre>
+            <div>
+                <input name="radio_group" type="radio" /> yes
+            </div>
+            <div>
+                <input name="radio_group" type="radio" /> no
+            </div>
+            <div>
+                <input name="radio_group" type="radio" /> maybe
+            </div>
+        </div>
+
+        <div class="slide">
+
+            <div style="display: inline-block; width: 45%;">
+                <div class="code">html</div>
+                <div class="code">head</div>
+                <div class="code">body</div>
+                <div class="code">p</div>
+                <div class="code">br</div>
+                <div class="code">a</div>
+                <div class="code">img</div>
+            </div>
+
+            <div style="display: inline-block; width: 45%;">
+                <div class="code">em</div>
+                <div class="code">strong</div>
+                <div class="code">ul</div>
+                <div class="code">ol</div>
+                <div class="code">li</div>
+                <div class="code">div</div>
+                <div class="code">span</div>
+                <div class="code">input</div>
+            </div>
+
+        </div>
+
+        <div class="slide">
+            <h2>HTML reference on class page</h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's make an html file</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's add images to the html file</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>some notes on terminology</h2>
+        </div>
+
+        <div class="slide">
+            <h2>elements</h2>
+        </div>
+
+        <div class="slide">
+            <h2>element:</h2>
+            <h2>an opening tag, closing tag, and all the things inside it</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">&lt;p&gt;
+            Text goes here
+        &lt;/p&gt;</span>
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>"a p element"</p>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    <span class="highlighted">&lt;body&gt;
+        &lt;p&gt;
+            Text goes here
+        &lt;/p&gt;
+    &lt;/body&gt;</span>
+&lt;/html&gt;</code></pre>
+            <p>"a body element"</p>
+        </div>
+
+        <div class="slide">
+            <h2>elements go inside other elements</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">&lt;p&gt;
+            Text goes here
+        &lt;/p&gt;</span>
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>"the p element is in the body element"</p>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">&lt;p&gt;
+            Text goes here
+        &lt;/p&gt;</span>
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>"the p element is also in the html element"</p>
+        </div>
+
+        <div class="slide">
+            <h2>indent elements one more step than the elements they are inside</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+<span class="highlighted">    </span>&lt;head&gt;
+<span class="highlighted">    </span>&lt;/head&gt;
+<span class="highlighted">    </span>&lt;body&gt;
+<span class="highlighted">    </span>    &lt;p&gt;
+<span class="highlighted">    </span>        Text goes here
+<span class="highlighted">    </span>    &lt;/p&gt;
+<span class="highlighted">    </span>&lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>everything in the html element is indented once</p>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+    <span class="highlighted">    </span>&lt;p&gt;
+    <span class="highlighted">    </span>    Text goes here
+    <span class="highlighted">    </span>&lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+            <p>everything in the body element is indented again</p>
+        </div>
+
+        <div class="slide">
+            <h2>make sure you move an entire element</h2>
+        </div>
+
+        <div class="slide">
+            <h2>move this</h2>
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">&lt;p&gt;
+            Text goes here
+        &lt;/p&gt;</span>
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>don't move this</h2>
+            <pre><code>&lt;!doctype html&gt;
+&lt;html&gt;
+    &lt;head&gt;
+    &lt;/head&gt;
+    &lt;body&gt;
+        <span class="highlighted">&lt;p&gt;
+            Text goes here</span>
+        &lt;/p&gt;
+    &lt;/body&gt;
+&lt;/html&gt;</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>this is going to take some effort</h2>
+        </div>
+
+        <div class="slide">
+            <h2>don't memorize this stuff</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/copy-paste.gif);">
+            <h2>copy paste is <em>recommended</em></h2>
+        </div>
+
+        <div class="slide">
+            <h2>copy paste (with your customizations) is <em>recommended</em></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/codecademy-html.png);">
+            <h2 style="margin-top: 175px;">learn more here</h2>
+            <a class="source" href="https://www.codecademy.com/learn/learn-html">codecademy.com/learn/learn-html</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/shayhowe.png);">
+            <h2>and here</h2>
+            <a href="http://learn.shayhowe.com/html-css">learn.shayhowe.com/html-css</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/w3schools.png);">
+            <h2 style="margin-top: 175px;">use with caution</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mdn.png);">
+            <h2 style="margin-top: 275px;">recommended</h2>
+            <a href="https://developer.mozilla.org/en-US/" class="source">developer.mozilla.org</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/css-tricks.png);">
+            <h2 style="margin-top: 275px;">recommended</h2>
+            <a href="https://css-tricks.com/" class="source">css-tricks.com</a>
+        </div>
+
+    </body>
+</html>
