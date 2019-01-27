@@ -1,0 +1,95 @@
+<html>
+    <head>
+        <title>In-class Exercises | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+            <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: CSS</h1>
+            </header>
+
+            <section>
+                <h2>Resources</h2>
+                <ul>
+                    <li><a href="http://htmldog.com/reference/cssproperties/">This HTML Dog page</a> lists the more common CSS properties you'll be using.</li>
+                    <li>This <a href="http://www.lesliefranke.com/files/reference/csscheatsheet.html">CSS cheat sheet</a> is a bit more terse but you might find it useful.</li>
+                    <li>There are more exhaustive references on <a href="https://css-tricks.com/almanac/">CSS-Tricks</a> and the <a href="https://developer.mozilla.org/en-US/docs/Web/CSS">Mozilla Developer Network</a>.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>Part 1: Add CSS to a site</h2>
+                <ol>
+                    <li>Log in to <a href="https://glitch.com">Glitch</a>.</li>
+                    <li>Open <a href="https://glitch.com/edit/#!/savi780-class2-css">this Glitch project</a> and "remix" it in your account by clicking on the project name, then <strong>Remix This</strong>.</li>
+                    <li>Open your <code>style.css</code> file (on the left of Glitch).</li>
+                    <li>Change the background color of the <code>body</code>. Add this to the bottom of the CSS file:
+                      <pre><code>body {
+  background-color: beige;
+}</code></pre>
+                      Confirm that this worked, then pick a different color. Refer to <a href="http://htmldog.com/references/css/values/color/">this page</a> for possible color values.
+                    </li>
+                    <li>Change the font family for the entire page by modifying the <code>font-family</code> for the <code>body</code>. For now let's set it to the generic <code>sans-serif</code>. Read more about this and see an example at <a href="https://css-tricks.com/almanac/properties/f/font-family/">CSS-Tricks</a>.</li>
+                    <li>Let's add some other styles. Still in the <code>styles.css</code> file, add a line after the code from the previous step and paste the following:
+                        <pre><code>p {
+  margin-top: 100px;
+}</code></pre>
+                        There should now be much more room between paragraphs. We selected the paragraph elements (<code>p</code>) and set the <code>margin-top</code> property to <code>100px</code>. This is probably too much margin&mdash;pick a smaller value that you think looks good.
+
+                    </li>
+                    <li>Style all the links (<code>a</code> elements) by adding a CSS statement after the statement we just added and setting properties as you like. I recommend <code><a href="https://css-tricks.com/almanac/properties/c/color/">color</a></code>, <code><a href="https://css-tricks.com/almanac/properties/b/background-color/">background-color</a></code>, and <code><a href="https://css-tricks.com/almanac/properties/t/text-decoration/">text-decoration</a></code> for starters.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Add CSS using classes</h2>
+                <ol>
+                    <li>Open <a href="https://glitch.com/edit/#!/savi780-class2-classes">this Glitch project</a> and "remix" it in your account by clicking on the project name, then <strong>Remix This</strong>.</li>
+                    <li>Open the site using the <strong>Show live</strong> button. Notice that we have a legend, but the circles for the legend are all the same color.</li>
+                    <li>Open the project's HTML file in Glitch.</li>
+                    <li>Find the HTML that creates the legend and note how the circles' classes are created.</li>
+                    <li>Open the project's CSS file in Glitch.</li>
+                    <li>Find the CSS that is styling the legend's circles.</li>
+                    <li>Add styles that change the background color for each circle in the legend. The colors should be:
+                      <ul>
+                        <li>Entire home/apartment: #88CCEE</li>
+                        <li>Private room: #CC6677</li>
+                        <li>Shared room: #18ad31</li>
+                      </ul>
+                      The first one is started for you at the bottom of the CSS file.
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Use developer tools to change other webpages' CSS</h2>
+                <ol>
+                    <li>Load a webpage in your browser.</li>
+                    <li>Open developer tools.</li>
+                    <li>
+                        <div>Using the Select Element tool, select an element:</div>
+                        <img src="img/devtools-select-element.png" />
+                    </li>
+                    <li>
+                        <p>On the left you should see the HTML for the element, and on the right you should see the CSS for it. The CSS might be more complicated depending on the page you're looking at.</p>
+                        <img src="img/devtools-panels.png" />
+                    </li>
+                    <li>
+                        <p>Style the element by clicking to the right of <code>element.style</code> in the CSS area. Start typing a property, use the arrow keys to select it, then press tab and type a value. This has an identical effect to adding CSS to a <code>style</code> attribute in an element.</p>
+                        <img src="img/devtools-style.gif" />
+                    </li>
+                    <li>Use the Select Element tool to find another element you would like to style. This time, instead of styling by adding properties to <code>element.style</code> add and change properties within one of the existing CSS statements that work on the element. When you do, multiple elements on the page should change.</li>
+                    <li>Continue defacing the page and get a feeling for how the CSS on the page works. In particular, look at turning properties off (using the checkboxes to the left of them) and changing colors using the built-in color picker.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
