@@ -75,7 +75,8 @@ window.addEventListener('load', function() {
     go(cur);
 
     if (Hammer) {
-        var hammertime = new Hammer(document.body, {});
+        delete Hammer.defaults.cssProps.userSelect;
+        var hammertime = new Hammer(document.body, { inputClass: Hammer.TouchInput });
         hammertime.get('pan').set({ direction: Hammer.DIRECTION_VERTICAL });
 
         hammertime.on('pandown panup', function (e) {
@@ -83,12 +84,16 @@ window.addEventListener('load', function() {
         });
 
         hammertime.on('swiperight', function (e) {
-            prev();
-            if (e && e.gesture) e.gesture.preventDefault();
+            if (e && e.gesture) {
+                prev();
+                e.gesture.preventDefault();
+            }
         });
         hammertime.on('swipeleft', function (e) {
-            next();
-            if (e && e.gesture) e.gesture.preventDefault();
+            if (e && e.gesture) {
+                next();
+                e.gesture.preventDefault();
+            }
         });
     }
 });
