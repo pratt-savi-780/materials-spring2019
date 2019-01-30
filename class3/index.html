@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 3 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 3</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 3</p>
+        </div>
+
+        <div class="slide">
+            <pre><code>a {
+    color: blue;
+    font-size: 20px;
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;p <span class="highlighted">style="font-size: 100px;"</span>&gt;
+    a special paragraph
+&lt;/p&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px; line-height: 55px;"><code><span class="highlighted">.plan</span> {
+    border-bottom: 1px solid black;
+    color: rgb(88, 18, 209);
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 45px; line-height: 55px;"><code>a {
+    /* Trying out a new color */
+    <span class="highlighted">/*color: blue;*/</span>
+    color: rgb(88, 18, 209);
+    ...
+}</code></pre>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h1>JavaScript</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/urban-reviewer.gif);">
+            <a href="http://www.urbanreviewer.org/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/la-freeway.png);">
+            <a href="http://www.latimes.com/projects/la-me-freeway-pollution/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/golden-gate-bathymetry.png);">
+            <a href="https://beta.observablehq.com/@clhenrick/golden-gate-bathymetry-contours" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-example.png">
+            <a href="https://glitch.com/edit/#!/leaflet-data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.jpg);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.jpg);">
+            <h2>Leaflet</h2>
+            <a class="source" href="https://leafletjs.com/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-ads.png);">
+            <a href="https://www.theverge.com/2016/5/24/11761794/google-maps-promoted-pins-announced-ads-coupons" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-price-hike.png);">
+            <a href="https://gadgets.ndtv.com/apps/features/google-maps-apis-new-pricing-impact-1907242" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/gmaps-price-hike-2.png);">
+            <a href="http://geoawesomeness.com/developers-up-in-arms-over-google-maps-api-insane-price-hike/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>Leaflet is free/open source</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can use any base map with Leaflet</h2>
+        </div>
+
+        <div class="slide">
+            <h2>similar JavaScript skills and mapping concepts are needed for both</h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's look at some JavaScript</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>what do you recognize?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what do you find unfamiliar?</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>let's change some settings on a JavaScript map</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a class="source" href="http://openwhatevermap.xyz/#3/21.94/-4.92">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide">
+            <h2>let's change the basemap on a JavaScript map</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/web-map-anatomy-4.jpg);">
+        </div>
+
+        <div class="slide">
+            <h2>3 steps:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>1: load Leaflet</h2>
+        </div>
+
+        <div class="slide">
+            <h2>libraries</h2>
+        </div>
+
+        <div class="slide">
+            <h2>libraries are bundles of code that you can load onto your page</h2>
+        </div>
+
+        <div class="slide">
+            <h2>libraries are generally open source and free</h2>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href=https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/&gt;
+&lt;script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"&gt;&lt;/script&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 20px; line-height: 30px;"><code>&lt;link rel="stylesheet" href=https://unpkg.com/leaflet@1.3.4/dist/leaflet.css"/&gt;
+&lt;script src="https://unpkg.com/leaflet@1.3.4/dist/leaflet.js"&gt;&lt;/script&gt;</code></pre>
+            <h2>(you'll copy and paste this)</h2>
+        </div>
+
+        <div class="slide">
+            <h2>2: make a place for the map to go</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>&lt;body&gt;
+    &lt;div id="map"&gt;&lt;/div&gt;
+&lt;/body&gt;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>3: create the map with Leaflet</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <ol>
+                <li>load Leaflet library</li>
+                <li>make a place for the map to go</li>
+                <li>tell Leaflet to create the map</li>
+            </ol>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>fun facts</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/java-vs-javascript.jpg);">
+            <a href="https://softtechmethodology.wordpress.com/2015/05/26/java-and-javascripts-two-different-programming-languages-for-developers/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript has almost nothing to do with Java</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JavaScript was initially designed in 10 days in 1995</h2>
+            <a href="https://www.computer.org/csdl/mags/co/2012/02/mco2012020007.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>variables</h2>
+            <pre><code>var</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables hold on to things so you can use them later</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables can be numbers</h2>
+            <pre><code>var size = 5;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and you can do math on them</h2>
+            <pre><code>var size = 5 * 1000;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables can also be strings (text)</h2>
+            <pre><code>var greeting = 'Hello world';</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and you can add strings together</h2>
+            <pre style="font-size: 35px; line-height: 45px;"><code>var name = 'Randall';
+var greeting = 'Hello, ' + name;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables can also be other things like maps</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var map = L.map('map').setView([34.03, -82.20], 5);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables can only have characters and numbers in their names</h2>
+        </div>
+
+        <div class="slide">
+            <h2>so don't to this:</h2>
+            <pre><code>var <span class="highlighted">shark map</span> = L.map('map');</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>and don't to this:</h2>
+            <pre><code>var <span class="highlighted">shark-map</span> = L.map('map');</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>do this instead:</h2>
+            <pre><code>var <span class="highlighted">sharkMap</span> = L.map('map');</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>arrays</h2>
+        </div>
+
+        <div class="slide">
+            <h2>arrays are lists of things</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var coordinates = <span class="highlighted">[]</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var coordinates = <span class="highlighted">[
+  34.03,
+  -82.20
+]</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>objects</h2>
+        </div>
+
+        <div class="slide">
+            <h2>objects store structured data</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var options = <span class="highlighted">{}</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var options = <span class="highlighted">{
+  maxZoom: 18
+}</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>var options = {
+  maxZoom: 18,
+  minZoom: 4
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>code is only useful if it has some kind of <em>output</em></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-example.png">
+            <h2>such as a map</h2>
+        </div>
+
+        <div class="slide">
+            <h2>or another change to the page</h2>
+        </div>
+
+        <div class="slide">
+            <h2>we'll get to these outputs, but in the meantime...</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>alert('NO');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+            <h2>a very common way for a programmer to get simple output</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+            <h2>this is not meant for the user, but is good for debugging</h2>
+        </div>
+
+        <div class="slide">
+            <h2>functions</h2>
+        </div>
+
+        <div class="slide">
+            <h2>functions are reusable chunks of code that do one thing</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>Math.max(2, 25);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you can think of <em>libraries</em> as a catalog of <em>functions</em></h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>L.map('map')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>map.setView([34.03, -82.20], 5);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>let's load data on a map!</h2>
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide" style="background-image: url(img/frustration.gif);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/frustration.gif);">
+            <h2>this isn't always easy</h2>
+        </div>
+
+        <div class="slide">
+            <h2>I will provide templates for you to work from</h2>
+        </div>
+
+        <div class="slide">
+            <h2>I recommend working through some introductory JavaScript lessons</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/khan-academy-js.png);">
+            <a href="https://www.khanacademy.org/computing/computer-programming/programming" class="source">khan academy</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/codecademy.png);">
+            <a href="https://www.codecademy.com/learn/introduction-to-javascript" class="source">Codecademy</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/javascripting.png);">
+            <a href="https://glitch.com/edit/#!/javascripting?path=README.md:1:0" class="source">javascripting</a>
+        </div>
+
+        <div class="slide">
+            <h2>for now, focus on:</h2>
+            <ul style="list-style: disc;">
+                <li>variables</li>
+                <li>arrays</li>
+                <li>objects</li>
+            </ul>
+        </div>
+
+    </body>
+</html>

@@ -1,0 +1,81 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Look at some JavaScript</h2>
+                <ol>
+                    <li>With a partner, open <a href="https://glitch.com/edit/#!/leaflet-simple">this Glitch site</a>. You do not have to remix this site yet, but do click the <strong>Show live</strong> button to see what it does.</li>
+                    <li>Look at the HTML and CSS for the site. What looks familiar? What looks unfamilar? What's your best guess for what the unfamiliar parts do?</li>
+                    <li>Look at the JavaScript for the site (<code>script.js</code>). What is the code doing? Do you notice any patterns in the code?</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Change some settings on a Leaflet map</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-simple">this Glitch site</a> in your account.</li>
+                    <li>The map is currently showing the whole world at once but the data is mostly on the eastern US coast. Let's recenter the map.</li>
+                    <li>In the <code>script.js</code> file on <strong>line 4</strong> there should be a line like this one: <pre><code>var map = L.map('map').setView([34.03, -82.20], 5);</code></pre>
+                        On this line:
+                        <ol>
+                            <li><code>34.03</code> is the center latitude,</li>
+                            <li><code>-82.20</code> is the center longitude, and</li>
+                            <li><code>5</code> is the zoom level.</li>
+                        </ol>
+                    </li>
+                    <li>Try editing the zoom and see what changes on the map.</li>
+                    <li>Try editing the latitude and longitude. If you want to be more precise, try using <a href="http://bboxfinder.com/">bboxfinder</a> to find a helpful center. (Keep an eye on the order of the latitude and longitude though!)</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Change the basemap</h2>
+                <ol>
+                    <li>Continuing with your code from the previous part, let's change the basemap. On <strong>line 7</strong> there is a url like this:
+                        <pre><code>https://stamen-tiles.a.ssl.fastly.net/toner/{z}/{x}/{y}.png</code></pre>
+                    </li>
+                    <li>Check out the <a href="https://wiki.openstreetmap.org/wiki/Tiles">OpenStreetMap wiki page on tiles</a>, some of which are free to use.</li>
+                    <li>
+                        Let's try the layer called "OSM no labels". One of the URLs listed there looks like this:
+                        <pre><code>https://tiles.wmflabs.org/osm-no-labels/${z}/${x}/${y}.png</code></pre>
+                        We need to remove the <code>$</code>s so it looks like this:
+                        <pre><code>https://tiles.wmflabs.org/osm-no-labels/{z}/{x}/{y}.png</code></pre>
+                        Then we can add replace the URL on line 7 with that and our map should include a different base map.
+                    </li>
+                    <li>Pick another layer from <a href="https://wiki.openstreetmap.org/wiki/Tiles">the wiki page</a> to replace the above URL with. As another example, this hillshade basemap:
+                        <pre><code>http://c.tiles.wmflabs.org/hillshading/${z}/${x}/${y}.png</code></pre>
+                        Delete the old URL in your code and paste the new URL in, making sure you remove the dollar signs (<code>$</code>):
+                        <pre><code>http://c.tiles.wmflabs.org/hillshading/{z}/{x}/{y}.png</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Load your own data</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Go to <a href="https://gist.github.com/">gist.github.com</a> and find the map data you created last week in class. If you can't find the data or didn't create any, make some simple data now with <a href="http://geojson.io/">geojson.io</a>.</li>
+                    <li>Download the data from Gist by clicking the <strong>Raw</strong> button and saving the resulting page.</li>
+                    <li>Upload the data to your Glitch <strong>assets</strong> folder (as you would with an image).</li>
+                    <li>Copy the URL for the uploaded data and paste it in <strong>line 12</strong> of the JavaScript, replacing the URL that is currently there.</li>
+                    <li>View the resulting page and confirm that your data is loaded on the map.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
