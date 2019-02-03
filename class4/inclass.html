@@ -1,0 +1,127 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Working with objects</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/thirsty-armchair">this Glitch site</a> in your account.</li>
+                    <li>Note that the school name (<code>SCHOOLNAME</code>) is on the developer tools console.</li>
+                    <li>Edit the <code>script.js</code> file to also log the school type (<code>SCH_TYPE</code>) on the console.</li>
+                    <li>Add another variable to <code>script.js</code>, named <code>row2</code>. This should be an object like the <code>row</code> object already in the file. The values in the object should be like this:
+                        <ul>
+                          <li>BORO: 'K'</li>
+                          <li>BORONUM: 2</li>
+                          <li>SCHOOLNAME: 'P.S. 101 THE VERRAZANO'</li>
+                          <li>SCH_TYPE: 'Elementary'</li>
+                          <li>ADDRESS: '2360 BENSON AVENUE'</li>
+                      </ul>
+                    </li>
+                    <li>In <code>script.js</code>, log some of the values from this object to the console.</li>
+                    <li>In the console, try accessing the values of the object interactively by typing:
+                      <pre><code>row2.</code></pre>
+                      and seeing the members of the object listed for you.
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Change some options on a Leaflet map</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-simple">this Glitch site</a> in your account.</li>
+                    <li>We would like to set options on the map that change the way the map works. Options are often stored in <strong>objects</strong>, so let's create an object called <code>mapOptions</code> before line 4:
+                        <pre><code>var mapOptions = {
+};</code></pre>
+                    </li>
+                    <li>In <code>mapOptions</code> we'll set some values. Let's start with setting <code>dragging</code> to <code>false</code>. Update <code>mapOptions</code> to 
+                        <pre><code>var mapOptions = {
+  dragging: false
+};</code></pre>
+                    </li>
+                    <li>We'll set more options, but first give these to Leaflet when it creates the map. Change the line
+                        <pre><code>var map = L.map('map').setView([38.500893,-98.745117], 5);</code></pre>
+                        to
+                        <pre><code>var map = L.map('map'<strong>, mapOptions</strong>).setView([38.500893,-98.745117], 5);</code></pre>
+                    </li>
+                    <li>The Leaflet documentation contains the <a href="https://leafletjs.com/reference-1.3.4.html#map-option">many options</a> available when creating a map. Try at least two more options and feel free to get rid of the <code>dragging</code> option we set above. For example, you might set <code>attributionControl</code> or <code>zoomControl</code> to <code>false</code>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Creating functions</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-simple">this Glitch site</a> in your account or continue working from the site from the previous example.</li>
+                    <li>Create a function at the bottom of the JavaScript file by copying this into the file:
+                        <pre><code>function zoomToPratt() {
+  map.setView([40.6919, -73.9649], 18);
+}</code></pre>
+                    </li>
+                    <li>The resulting page should be exactly as before&mdash;the function doesn't do anything until you call it. Open developer tools, go to the console tab, and type
+                        <pre><code>zoomToPratt()</code></pre>
+                        When you press <code>[enter]</code> the map should zoom to the Pratt Brooklyn campus.
+                    </li>
+                    <li>Create another function in your JavaScript file after <code>zoomToPratt</code> that zooms somewhere else in the world.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Load a GeoJSON file from NYC Open Data</h2>
+                <ol>
+                    <li>Go to <a href="https://data.cityofnewyork.us/">New York's Open Data portal</a>.</li>
+                    <li>Search for <strong>school districts</strong>.</li>
+                    <li>Open the first result, called <strong>School districts</strong>.</li>
+                    <li>Click <strong>Export</strong>.</li>
+                    <li>Download the data as a <strong>GeoJSON</strong>.</li>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Upload the GeoJSON to the assets folder and load the data on the map.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: Load another GeoJSON file from NYC Open Data</h2>
+                <ol>
+                    <li>Go to <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">New York's Open Data portal page for 311 reports</a>.</li>
+                    <li>Filter the data to only show reports from the past week.</li>
+                    <li>Also filter the data to only show reports of a complaint type of your choosing.</li>
+                    <li>Also filter the data exclude data where the latitude is null.</li>
+                    <li>Click <strong>Export</strong> and download the data as a <strong>CSV</strong>.</li>
+                    <li>Convert the CSV to a GeoJSON file using <a href="http://convertcsv.com/csv-to-geojson.htm">this CSV to GeoJSON converter</a>.</li>
+                    <li>Download the resulting GeoJSON file from the converter.</li>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Upload the GeoJSON to the assets folder and load the data on the Leaflet map.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Load data with the SODA API</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Go to <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj">New York's Open Data portal page for school districts</a>.</li>
+                    <li>Click <strong>Export</strong>.</li>
+                    <li>Click <strong>SODA API</strong>.</li>
+                    <li>Copy the text under <strong>API Endpoint</strong>. It should look something like
+                        <pre><code>https://data.cityofnewyork.us/resource/cuae-wd7h.json</code></pre>                     
+                    </li>
+					<li>In the JavaScript file, on line 12 (the line where <code>fetch</code> is being called), replace the URL with the one you copied.</li>
+					<li>Replace <code>json</code> with <code>geojson</code> in the URL that you copied.</li>
+					<li>Click <strong>Show Live</strong> in Glitch to see the result&mdash;you should see the school districts on the map.</li>
+					<li>Copy and paste lines 12 through 21 and try adding <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">311 requests</a>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

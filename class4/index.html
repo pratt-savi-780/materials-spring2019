@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 4 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 4</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 4</p>
+        </div>
+
+        <div class="slide">
+            <h1>JavaScript</h1>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-example.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet.jpg);">
+            <h2>Leaflet</h2>
+            <a class="source" href="https://leafletjs.com/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>leaflet makes its own HTML elements</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dom.png);">
+            <a href="https://leaflet-simple.glitch.me/" class="source">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>what are variables?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>variables</h2>
+            <pre><code>var</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>variables hold on to things so you can use them later</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what are arrays?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>arrays are lists of things</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var coordinates = <span class="highlighted">[
+  34.03,
+  -82.20
+]</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>what are objects?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>objects store structured data as key-value pairs</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>var options = <span class="highlighted">{
+  maxZoom: 18
+}</span>;</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>objects and arrays are useful for holding onto data</h2>
+        </div>
+
+        <div class="slide">
+            <h2>sometimes when you load data, you get it as an object</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-data.png);">
+            <h2>for example</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/qgis-data.png);">
+            <pre style="background: rgba(255, 255, 255, 0.8);"><code>var row = {
+  BORO: 'Q',
+  BORONUM: 4,
+  SCHOOLNAME: 'P.S. 171 PETER G. VAN ALST',
+  SCH_TYPE: 'Elementary',
+  ADDRESS: '14-14 29 AVENUE'
+};</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you can get that data out of the object in two ways:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>you can get that data out of the object in two ways:</h2>
+            <pre><code>row.SCHOOLNAME</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>you can get that data out of the object in two ways:</h2>
+            <pre><code>row.SCHOOLNAME</code></pre>
+            <pre><code>row['SCHOOLNAME']</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>functions</h2>
+        </div>
+
+        <div class="slide">
+            <h2>functions are reusable chunks of code that do one thing</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>alert('NO');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>console.log('The code got here');</code></pre>
+            <h2>typing the name of a function with parentheses <em>calls</em> the function and asks it to do something</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>L.map('map');</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-options.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-options.png);">
+            <h2>you have a number of options when creating a Leaflet map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-options.png);">
+            <h2>put these after the map <code>div</code>'s <code>id</code></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-options.png);">
+            <pre><code>L.map('map', <em>options</em>);</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2>you could add options with the object defined as you call the function:</h2>
+          <pre><code>L.map('map', {
+  zoomControl: false
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2>or as two steps:</h2>
+          <pre><code>var mapOptions = {
+  zoomControl: false
+};
+
+L.map('map', mapOptions);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>creating your own functions</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet() {
+  console.log('Hello');
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet(name) {
+  console.log('Hello, ' + name);
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet(<span class="highlighted">name</span>) {
+  console.log('Hello, ' + name);
+}</code></pre>
+            <h2><code>name</code> is a parameter</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>function greet(<span class="highlighted">name</span>) {
+  console.log('Hello, ' + name);
+}</code></pre>
+            <h2><code>name</code> is a parameter</h2>
+            <h2>it's a variable that only exists inside the function</h2>
+        </div>
+
+        <div class="slide">
+            <h2>parameters affect how a function works</h2>
+        </div>
+
+        <div class="slide">
+            <pre><code>map.setView(<span class="highlighted">center, zoom</span>);</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>map.setView(<span class="highlighted">center, zoom</span>);</code></pre>
+            <h2>you can have multiple parameters, separated by commas</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-docs-setview.png);">
+            <a href="https://leafletjs.com/reference-1.3.4.html#map-setview" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre><code>map.setView(<span class="highlighted">[34.03, -82.20], 5</span>);</code></pre>
+            <h2>when you're calling the function, these values are called <em>arguments</em></h2>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>Where do file formats come from?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-mailinglist.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-cc.png);">
+        </div>
+
+        <div class="slide">
+            <h2>Where does GeoJSON work?</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-qgis.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/esri.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/carto.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-io.png);">
+            <a href="http://geojson.io/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-shp-binary.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-shp-binary.png);">
+            <h2>Shapefiles are difficult to read</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON is readable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/geojson-readable.png);">
+        </div>
+
+        <div class="slide">
+            <pre><code>{
+  ...
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{
+  "type": "FeatureCollection",
+  "features": [ ... ]
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>{
+  "type": "FeatureCollection",
+  "features": [
+	{ ... },
+	{ ... },
+	{ ... }
+  ]
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre style="font-size: 32px; line-height: 38px;"><code>{
+  "type": "Feature",
+  "properties": {
+    "marker-color": "#bf7070",
+    "marker-size": "medium",
+    "marker-symbol": "school",
+    "description": "class"
+  },
+  "geometry": {
+    "type": "Point",
+    "coordinates": [
+      -73.96490693092346,
+      40.69176343597068
+    ]
+  }
+}</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>JSON</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JSON</h2>
+            <h2>JavaScript Object Notation</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JSON</h2>
+            <h2><em>J</em>ava<em>S</em>cript <em>O</em>bject <em>N</em>otation</h2>
+        </div>
+
+        <div class="slide">
+            <h2>JSON</h2>
+            <h2>a file you can load in JavaScript that becomes an object</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+        </div>
+
+        <div class="slide">
+            <h2>GeoJSON</h2>
+            <h2>a JSON file with geometry data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-load-data.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data.png);">
+            <a href="https://data.cityofnewyork.us" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-search-results.png);">
+            <a href="https://data.cityofnewyork.us" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-school-districts.png);">
+            <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-school-districts-export.png);">
+            <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-dataset.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-view.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-view.png);">
+            <h2>some datasets include a ton of data</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filter.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filter.png);">
+            <h2>sometimes you'll want to filter it first</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filter-blank.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-filter-blank.png);">
+            <h2>filtering out blank latitudes ensures you can map it</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-export-no-geojson.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-export-no-geojson.png);">
+            <h2>some datasets don't have a GeoJSON option</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-export-no-geojson.png);">
+            <h2>download as a CSV and convert with a GIS</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv-to-geojson.png);">
+            <a href="http://convertcsv.com/csv-to-geojson.htm" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/csv-to-geojson.png);">
+            <h2>or use an online converter</h2>
+            <a href="http://convertcsv.com/csv-to-geojson.htm" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-school-districts.png);">
+            <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-school-districts.png);">
+            <h2>okay but that's kind of a lot of steps</h2>
+            <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-school-districts.png);">
+            <h2>and what if the data changes?</h2>
+            <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api.png);">
+            <h2>an API endpoint is a URL you can use to access an API</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre><code>https://data.cityofnewyork.us
+  /resource/cuae-wd7h.json</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre><code>https://data.cityofnewyork.us
+  /resource/cuae-wd7h.json</code></pre>
+            <h2>if you open this in a browser, it goes straight to the data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-image-search.png);">
+            <h2>kinda like with images:</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/google-image-search.png);">
+            <h2>you don't use the URL of the page the image is on</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/image.png);">
+            <h2>you use the URL of the image itself</h2>
+        </div>
+
+        <div class="slide">
+          <pre><code>https://data.cityofnewyork.us
+  /resource/cuae-wd7h.json</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api-output.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api-output.png);">
+            <h2>JSON, but not usable in Leaflet</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre><code>https://data.cityofnewyork.us
+  /resource/cuae-wd7h.<strong>geo</strong>json</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api-output-geojson.png);">
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/nyc-open-data-api-output-geojson.png);">
+            <h2>now it's GeoJSON!</h2>
+            <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 6</a></h2>
+        </div>
+
+    </body>
+</html>
