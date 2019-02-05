@@ -1,0 +1,105 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: More JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Load another GeoJSON file from NYC Open Data</h2>
+                <ol>
+                    <li>Go to <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">New York's Open Data portal page for 311 reports</a>.</li>
+                    <li>Filter the data to only show reports from the past week.</li>
+                    <li>Also filter the data to only show reports of a complaint type of your choosing.</li>
+                    <li>Also filter the data exclude data where the latitude is null.</li>
+                    <li>Click <strong>Export</strong> and download the data as a <strong>CSV</strong>.</li>
+                    <li>Convert the CSV to a GeoJSON file using <a href="http://convertcsv.com/csv-to-geojson.htm">this CSV to GeoJSON converter</a>.</li>
+                    <li>Download the resulting GeoJSON file from the converter.</li>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Upload the GeoJSON to the assets folder and load the data on the Leaflet map.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Load data with the SODA API</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
+                    <li>Go to <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj">New York's Open Data portal page for school districts</a>.</li>
+                    <li>Click <strong>Export</strong>.</li>
+                    <li>Click <strong>SODA API</strong>.</li>
+                    <li>Copy the text under <strong>API Endpoint</strong>. It should look something like
+                        <pre><code>https://data.cityofnewyork.us/resource/cuae-wd7h.json</code></pre>                     
+                    </li>
+					<li>In the JavaScript file, on line 12 (the line where <code>fetch</code> is being called), replace the URL with the one you copied.</li>
+					<li>Replace <code>json</code> with <code>geojson</code> in the URL that you copied.</li>
+					<li>Click <strong>Show Live</strong> in Glitch to see the result&mdash;you should see the school districts on the map.</li>
+					<li>Copy and paste lines 12 through 21 and try adding <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">311 requests</a>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Popups</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/earthy-koi?path=script.js:16:25">this Glitch site</a> in your account.</li>
+                    <li>Edit the code to change the text in the popups. On <strong>line 23</strong> edit the string that is returned from our function to whatever you like.</li>
+                    <li>Run the site and confirm that the popups contain the string you chose to use.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Popups using feature data</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-popups">this Glitch site</a> in your account.</li>
+                    <li>Uncomment <strong>line 25</strong> and click on some features while looking at the console in developer tools. You should see the <code>properties</code> object for each feature as you do.</li>
+                    <li>Select an additional property to add to the popup and add it to the text we are returning for the popup. For example, the original text could be:
+                        <pre><code>return layer.feature.properties['complaint_type'];</code></pre>
+                        and we could add a space between that and another property by replacing the above with:
+                        <pre><code>return layer.feature.properties['complaint_type']<strong> + ' ' + layer.feature.properties['descriptor'];</strong></code></pre>
+                    </li>
+                    <li>You can also add HTML to a popup by putting the HTML in the text itself. Continuing the above, we could make the <code>complaint_type</code> bold by replacing:
+                        <pre><code>return layer.feature.properties['complaint_type']<strong> + ' ' + layer.feature.properties['descriptor'];</strong></code></pre>
+                        with:
+                        <pre><code>return <strong>'&lt;strong&gt;'</strong> + layer.feature.properties['complaint_type'] + <strong>'&lt;/strong&gt;</strong> ' + layer.feature.properties['descriptor'];</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: Styling popups and other Leaflet elements</h2>
+                <ol>
+                    <li>Continue with the Glitch site you started working on in the previous exercise.</li>
+                    <li>Surround some of the feature properties that you're putting in the popup in <code>&lt;div&gt;</code> tags. For example, if you had
+                        <pre><code>return layer.feature.properties['complaint_type'];</code></pre>
+                        you would wrap it in <code>&lt;div&gt;</code> tags like this:
+                        <pre><code>return <strong>'&lt;div&gt;'</strong> + layer.feature.properties['complaint_type'] + <strong>'&lt;/div&gt;'</strong>;</code></pre>
+                    </li>
+                    <li>Add class attributes to the <code>div</code>s for styling in CSS. If you have
+                        <pre><code>return '&lt;div <strong>class="popup-complaint-type"</strong>&gt;' + layer.feature.properties['complaint_type'] + '&lt;/div&gt;';</code></pre>
+                    </li>
+                    <li>Style the classes you created in your popup in your CSS file.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Styling features</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/quick-collision?path=script.js:21:36">this Glitch site</a> in your account.</li>
+                    <li>Open the <a href="https://leafletjs.com/reference-1.3.4.html">Leaflet documentation</a>. For this exercise you'll be most interested in <a href="https://leafletjs.com/reference-1.3.4.html#geojson">GeoJSON</a> and <a href="https://leafletjs.com/reference-1.3.4.html#path-option">Path options</a></li>
+                    <li>Style the polygons (council districts) by adding an options parameter to <code>L.geoJson</code> and creating a <code>style</code> function. Use <a href="https://glitch.com/edit/#!/leaflet-styled-polygons">this Glitch site</a> for assistance as needed.</li>
+                    <li>Style the points (311 complaints) by adding an options parameter to <code>L.geoJson</code> and creating <code>pointToLayer</code> and <code>style</code> functions as is done in <a href="https://glitch.com/edit/#!/leaflet-styled-points">this Glitch site</a>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

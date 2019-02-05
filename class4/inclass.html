@@ -87,38 +87,6 @@
                 </ol>
             </section>
 
-            <section>
-                <h2>Part 5: Load another GeoJSON file from NYC Open Data</h2>
-                <ol>
-                    <li>Go to <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">New York's Open Data portal page for 311 reports</a>.</li>
-                    <li>Filter the data to only show reports from the past week.</li>
-                    <li>Also filter the data to only show reports of a complaint type of your choosing.</li>
-                    <li>Also filter the data exclude data where the latitude is null.</li>
-                    <li>Click <strong>Export</strong> and download the data as a <strong>CSV</strong>.</li>
-                    <li>Convert the CSV to a GeoJSON file using <a href="http://convertcsv.com/csv-to-geojson.htm">this CSV to GeoJSON converter</a>.</li>
-                    <li>Download the resulting GeoJSON file from the converter.</li>
-                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
-                    <li>Upload the GeoJSON to the assets folder and load the data on the Leaflet map.</li>
-                </ol>
-            </section>
-
-            <section>
-                <h2>Part 6: Load data with the SODA API</h2>
-                <ol>
-                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-data">this Glitch project</a> into your Glitch account.</li>
-                    <li>Go to <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj">New York's Open Data portal page for school districts</a>.</li>
-                    <li>Click <strong>Export</strong>.</li>
-                    <li>Click <strong>SODA API</strong>.</li>
-                    <li>Copy the text under <strong>API Endpoint</strong>. It should look something like
-                        <pre><code>https://data.cityofnewyork.us/resource/cuae-wd7h.json</code></pre>                     
-                    </li>
-					<li>In the JavaScript file, on line 12 (the line where <code>fetch</code> is being called), replace the URL with the one you copied.</li>
-					<li>Replace <code>json</code> with <code>geojson</code> in the URL that you copied.</li>
-					<li>Click <strong>Show Live</strong> in Glitch to see the result&mdash;you should see the school districts on the map.</li>
-					<li>Copy and paste lines 12 through 21 and try adding <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">311 requests</a>.</li>
-                </ol>
-            </section>
-
             <footer>
                 <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
             </footer>

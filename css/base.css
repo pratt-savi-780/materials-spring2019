@@ -197,3 +197,7 @@ code.wrapped {
 .highlighted {
     background-color: yellow;
 }
+
+pre.prettyprint {
+    border: none !important;
+}
