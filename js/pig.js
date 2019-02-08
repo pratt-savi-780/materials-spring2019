@@ -49,6 +49,7 @@ window.addEventListener('load', function() {
         e.preventDefault();
     });
     w.addEventListener('DOMMouseScroll', function(e) {
+        if (inGridMode()) return;
         e.preventDefault();
     });
     d.addEventListener('keydown', function(e) {
