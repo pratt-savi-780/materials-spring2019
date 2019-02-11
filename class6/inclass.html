@@ -1,0 +1,113 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: More JavaScript</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: <code>if</code> and <code>else</code></h2>
+                <ol>
+                    <li>Start a blank <a href="https://glitch.com">Glitch site</a> in your account.</li>
+                    <li>In <code>script.js</code>, we want to add an <code>if</code> statement. Delete anything in the file. Then add this to the file:
+                        <pre><code>if (4 === 5) {
+  console.log('4 is 5');
+}</code></pre>
+                    </li>
+                    <li>Confirm that your function works by viewing the resulting site (<strong>Show Live</strong>) and looking at the console in developer tools. There should be <strong>nothing</strong> in the console!</li>
+                    <li>Let's add an <code>else</code> statement. Delete the existing code in <code>script.js</code> and add this:
+                        <pre><code>if (4 === 5) {
+  console.log('4 is 5');
+}
+else {
+  console.log('4 is not 5');
+}</code></pre>
+                    </li>
+                    <li>Look in the console now and you should see "4 is not 5".</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Conditionally styling features</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-conditional-styles">this Glitch site</a> in your account.</li>
+                    <li>The points are currently styled differently where <code>status</code> is <code>Closed</code>. Instead style the points where <code>complaint_type</code> is <code>HEATING</code>.</li>
+                    <li>Try styling another value of <code>complaint_type</code> differently.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Filtering data using the NYC Open Data API</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/ivory-daffodil">this Glitch site</a> in your account or continue working from the site from the previous example.</li>
+                    <li>Open the JavaScript file.</li>
+                    <li>Change the <code>borough</code> filter to <code>QUEENS</code> and confirm that the map data is updated.</li>
+                    <li>Keeping that <code>borough</code> filter, add a filter for <code>complaint_type</code>. At the end of the URL (after <code>QUEENS</code>, add:
+                        <pre><code>&amp;complaint_type=Rodent</code></pre>
+                    </li>
+                    <li>Try another filter. Remember that you can refer to the <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv">API docs</a> for the dataset to find all of the fields an some examples of using them.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: More advanced filters with the NYC Open Data API</h2>
+                <ol>
+                    <li>Refer to the <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv">API documentation for the dataset</a> and for <a href="https://dev.socrata.com/docs/queries/">queries more generally</a>.</li>
+                    <li>Remix <a href="https://glitch.com/edit/#!/holly-burglar">this Glitch site</a> in your account. This example uses <a href="https://dev.socrata.com/docs/functions/in.html"><code>in</code></a> in a <code>$where</code> filter to find complaints in two.</li>
+                    <li>Open the JavaScript file.</li>
+                    <li>Change the boroughs selected in the <code>in</code> condition.</li>
+                    <li>Change the <code>complaint_type</code> that is being searched for.</li>
+                    <li>Add <a href="https://dev.socrata.com/docs/queries/limit.html">$limit</a> and <a href="https://dev.socrata.com/docs/queries/order.html">$order</a> parameters. Try finding the most recent 100 complaints where <code>complaint_type</code> is <code>Noise - Residential</code></li>
+                    <li>Make another query of your choosing.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: A zoom out button</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/vine-emery">this Glitch site</a> in your account.</li>
+                    <li>The <strong>zoom in</strong> button should work on the resulting page.</li>
+                    <li>Implement JavaScript for the <strong>zoom out</strong> button&mdash;it should be very similar to the code for the <strong>zoom in</strong> button.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Listening for Leaflet events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-map-events">this Glitch project</a> into your Glitch account.</li>
+                    <li>In the JavaScript, listen for more map events and log out the name of the event. For example, copy
+                        <pre><code>map.on('moveend', function () {
+  console.log('moveend');
+});</code></pre>
+                        paste those lines (so the <code>moveend</code> listener still exists) and change <code>moveend</code> in the new listener, like this:
+                        <pre><code>map.on('click', function () {
+  console.log('click');
+});</code></pre>
+                        Don't forget to change what is logged out, too, so you can see which event happened.
+                    </li>
+                    <li>Do the above process until you have five different <a href="https://leafletjs.com/reference-1.3.4.html#map-event">map events</a>. Pay special attention to:
+                        <ul>
+                            <li><code>click</code></li>
+                            <li><code>dblclick</code></li>
+                            <li><code>mousedown</code></li>
+                            <li><code>mouseup</code></li>
+                            <li><code>move</code></li>
+                        </ul>
+                        How do the above events differ from each other?
+                    </li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
