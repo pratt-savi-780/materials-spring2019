@@ -1,0 +1,399 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 7 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 7</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 7</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-example.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-class-style.png);">
+            <a href="https://glitch.com/edit/#!/complete-watchmaker" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/open-data-api-docs-borough.png);">
+            <a href="https://dev.socrata.com/foundry/data.cityofnewyork.us/fhrw-4uyv" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-conditional-styles.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-conditional-styles" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/ajax_grounded.gif);">
+        </div>
+
+        <div class="slide">
+            <h2>most of the time, code happens sequentially</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-0.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-styled-polygons?path=script.js:2:0" class="source">source</a>
+
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-1.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-styled-polygons?path=script.js:2:0" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-2.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-styled-polygons?path=script.js:2:0" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/code-sequence-3.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-styled-polygons?path=script.js:2:0" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>events</h2>
+        </div>
+
+        <div class="slide">
+          <h2>events are actions that might happen on a web page</h2>
+        </div>
+
+        <div class="slide">
+          <h2>events give the user a way to interrupt the program</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/doorbell.jpg);">
+        </div>
+
+        <div class="slide">
+          <h2>events</h2>
+          <ul>
+            <li>click</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>events</h2>
+          <ul>
+            <li>click</li>
+            <li>key press</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>events</h2>
+          <ul>
+            <li>click</li>
+            <li>key press</li>
+            <li>text input changed</li>
+          </ul>
+        </div>
+
+        <div class="slide">
+          <h2>events</h2>
+          <ul>
+            <li>click</li>
+            <li>key press</li>
+            <li>text input changed</li>
+            <li>etc</li>
+          </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mdn-events.png);">
+          <a class="source" href="https://developer.mozilla.org/en-US/docs/Web/Events">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mdn-events-keyboard.png);">
+          <a class="source" href="https://developer.mozilla.org/en-US/docs/Web/Events">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/albert-typing.png);">
+          <a class="source" href="https://type-controller.glitch.me/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mdn-events-mouse.png);">
+          <a class="source" href="https://developer.mozilla.org/en-US/docs/Web/Events">source</a>
+        </div>
+
+        <div class="slide">
+          <h2>event listeners</h2>
+        </div>
+
+        <div class="slide">
+          <h2>event listeners</h2>
+          <h2>...listen for events</h2>
+        </div>
+
+        <div class="slide">
+          <h2>event listeners</h2>
+          <h2>functions that get called when an event happens</h2>
+        </div>
+
+        <div class="slide">
+          <h2>for example, adding a button that zooms a map</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-zoom.png);">
+          <a class="source" href="https://glitch.com/edit/#!/vine-emery">source</a>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+          <ol>
+            <li>select the element</li>
+          </ol>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton;</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton;</code></pre>
+          <h2><code>zoomInButton</code> will contain the element we want</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector(...);</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector(...);</code></pre>
+          <h2><code>document.querySelector()</code> selects an element on a page</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector('.zoom-in-button');</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector('.zoom-in-button');</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector('.zoom-in-button');</code></pre>
+          <h2>you use CSS selectors here</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector('.zoom-in-button');</code></pre>
+          <h2><code>.zoom-in-button</code> matches the element with class <code>zoom-in-button</code></h2>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+          <ol>
+            <li>select the element</li>
+            <li>write a function that will listen for the event</li>
+          </ol>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener(...);</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener(...);</code></pre>
+          <h2>add an event listener to an element</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener('click', ...);</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener('click', ...);</code></pre>
+          <h2>listen for the <code>click</code> event</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  map.zoomIn();
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  map.zoomIn();
+});</code></pre>
+          <h2>the second parameter is a function that runs on click</h2>
+        </div>
+
+        <div class="slide">
+          <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>we could also use a button to load or filter data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/filter-button.png);">
+            <a href="https://glitch.com/edit/#!/woozy-bobcat" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/filter-button.png);">
+            <h2>select the button</h2>
+            <a href="https://glitch.com/edit/#!/woozy-bobcat" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/filter-button.png);">
+            <h2>run some code to load data</h2>
+            <a href="https://glitch.com/edit/#!/woozy-bobcat" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/llnyc.png);">
+            <a href="https://livinglotsnyc.org/" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>dropdowns</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dropdown-html.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dropdown-html.png);">
+            <h2>dropdowns are made up of <code>option</code>s</h2>
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dropdown-html.png);">
+            <h2>the <code>option</code> has an attribute called <code>value</code></h2>
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown-code.png);">
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown-code.png);">
+            <h2>the dropdown changes when someone changes the selected <code>option</code></h2>
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-dropdown-code.png);">
+            <h2>and you can retrieve the <code>value</code></h2>
+            <a href="https://glitch.com/edit/#!/auspicious-squid" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+          <h2>listening for leaflet events</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-events.png);">
+          <a href="https://leafletjs.com/reference-1.3.4.html#map-event" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-events.png);">
+          <h2>map events</h2>
+          <a href="https://leafletjs.com/reference-1.3.4.html#map-event" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>map.on('moveend', function () {
+  console.log('done moving');
+});</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-event-example.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-map-events" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-path-events.png);">
+          <a href="https://leafletjs.com/reference-1.3.4.html#path-click" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  <span class="highlighted">onEachFeature</span>: function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: <span class="highlighted">function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }</span>
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2>why?</h2>
+        </div>
+
+        <div class="slide">
+          <h2>you might want to put the feature's information somewhere other than a popup</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/changing-the-food-chain.png);">
+          <a href="http://changingthefoodchain.org/#/organizations/769?lat=38.97&lng=-76.91&z=11" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dsl-foreign-born.png);">
+          <a href="http://dsl.richmond.edu/panorama/foreignborn/#decade=2010&county=G2000810" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+    </body>
+</html>
