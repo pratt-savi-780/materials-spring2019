@@ -1,0 +1,634 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 8 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 8</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 8</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/friends-nyt.png);">
+            <a href="https://www.nytimes.com/interactive/2018/09/19/upshot/facebook-county-friendships.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>methodology</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/preferential-rents.png);">
+            <a href="https://projects.propublica.org/graphics/preferential-rents" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/preferential-rents-1.png);">
+            <a href="https://projects.propublica.org/graphics/preferential-rents" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>keep track of your work!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>how did you get the data?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>how did you change the data, beyond simple filetype conversions?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>what are some caveats about the data?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>plan on including these somewhere in your project</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+          <h2>events</h2>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+          <ol>
+            <li>select the element</li>
+          </ol>
+        </div>
+
+        <div class="slide">
+          <h2>two steps:</h2>
+          <ol>
+            <li>select the element</li>
+            <li>write a function that will listen for the event</li>
+          </ol>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint" style="font-size: 45px;"><code>var zoomInButton = document.querySelector('.zoom-in-button');</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  map.zoomIn();
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2>listening for leaflet events</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-events.png);">
+          <a href="https://leafletjs.com/reference-1.3.4.html#map-event" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-events.png);">
+          <h2>map events</h2>
+          <a href="https://leafletjs.com/reference-1.3.4.html#map-event" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>map.on('moveend', function () {
+  console.log('done moving');
+});</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-map-event-example.png);">
+          <a href="https://glitch.com/edit/#!/leaflet-map-events" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-path-events.png);">
+          <a href="https://leafletjs.com/reference-1.3.4.html#path-click" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  <span class="highlighted">onEachFeature</span>: function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: <span class="highlighted">function (feature, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }</span>
+});</code></pre>
+        </div>
+
+        <div class="slide">
+          <h2>why?</h2>
+        </div>
+
+        <div class="slide">
+          <h2>you might want to put the feature's information somewhere other than a popup</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/changing-the-food-chain.png);">
+          <a href="http://changingthefoodchain.org/#/organizations/769?lat=38.97&lng=-76.91&z=11" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/dsl-foreign-born.png);">
+          <a href="http://dsl.richmond.edu/panorama/foreignborn/#decade=2010&county=G2000810" class="source">source</a>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (<span class="highlighted">feature</span>, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+          <h2>the feature data (from the GeoJSON file)</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (feature, <span class="highlighted">layer</span>) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+          <h2>the layer (icon, shape) representing the feature on the map</h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (feature, <span class="highlighted">layer</span>) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+          <h2>listen for events on the <code>layer</code></h2>
+        </div>
+
+        <div class="slide">
+          <pre class="prettyprint"><code>var overlayData = L.geoJson(data, {
+  onEachFeature: function (<span class="highlighted">feature</span>, layer) {
+    layer.on('click', function () {
+      console.log('you clicked on:', feature);
+    });
+  }
+});</code></pre>
+          <h2>get the feature data from <code>feature</code></h2>
+        </div>
+
+        <div class="slide">
+          <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>text inputs</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input-html.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-text-input-code.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-text-input" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>that's a little underwhelming&mdash;users shouldn't have to know the exact value</h2>
+        </div>
+
+        <div class="slide">
+            <h2>let's do partial matches</h2>
+        </div>
+
+        <div class="slide">
+          <h2>with <code>like</code></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/soql-like.png);">
+            <a href="https://dev.socrata.com/docs/functions/like.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=complaint_type like '%litter%'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%litter%'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%litter%'</code></pre>
+            <h2>(make <code>complaint_type</code> lower-case)</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%25litter%25'</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?
+  $where=lower(complaint_type) like '%25litter%25'</code></pre>
+            <h2>(<code>%</code> is special in URLs, <em>escape</em> the value)</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure-percent.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure-percent.png);">
+            <h2><code>q=%25</code></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/url-structure-percent.png);">
+            <h2>escaping</h2>
+        </div>
+
+        <div class="slide">
+            <h2>escaping comes up pretty often in code</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-test.png);">
+            <a href="https://glitch.com/edit/#!/brief-bank?path=index.html:28:0" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-test.png);">
+            <h2>what if we want literally <em>&lt;test&gt;</em> to show up on the page?</h2>
+            <a href="https://glitch.com/edit/#!/brief-bank?path=index.html:28:0" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-entities.png);">
+            <a href="https://dev.w3.org/html5/html-author/charref" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-entities.png);">
+            <h2>html entities</h2>
+            <a href="https://dev.w3.org/html5/html-author/charref" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/html-entities.png);">
+            <h2>not necessary for what we're talking about but could be useful!</h2>
+            <a href="https://dev.w3.org/html5/html-author/charref" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>for URLs, if you want to be on the safe side use <code>encodeURIComponent</code> on parameters</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/encode-uri-component.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+        <div class="slide">
+            <h2>checkboxes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-html.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+            <h2>works fine when we have one or two buttons</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-simple.png);">
+            <a href="https://glitch.com/edit/#!/futuristic-cough" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>what if we have many checkboxes?</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelector()</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelector<strong>All</strong>()</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelectorAll('.borough-checkbox')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelectorAll('.borough-checkbox')</code></pre>
+            <h2>select all of the elements with class <code>borough-checkbox</code></h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>but <code>addEventListener</code> only works with <em>one element</em></h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>so if we want to add event listeners to many elements, we need to look at each individually</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>forEach</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>looks at each element in an array</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>calls a function once on each element</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});
+
+&gt; 2
+&gt; 148
+&gt; 400</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(
+);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(function (element) {
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(function (element) {
+  // Do something with <strong>element</strong>
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>I prefer <em>plural</em> names for arrays, <em>singular</em> names for elements</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var boroughs = [
+  'Bronx',
+  'Brooklyn',
+  'Manhattan'
+];
+
+boroughs.forEach(function (borough) {
+  console.log('Hello ' + borough);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 5</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-broken.png);">
+            <a href="https://glitch.com/edit/#!/sudden-trombone" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-broken.png);">
+						<h2>not quite right...!</h2>
+            <a href="https://glitch.com/edit/#!/sudden-trombone" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-broken-code.png);">
+            <a href="https://glitch.com/edit/#!/sudden-trombone" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>instead of <code>borough=BROOKLYN</code> we need to match a list of boroughs</h2>
+        </div>
+
+        <div class="slide">
+            <h2>like <code>borough IN ('BROOKLYN', 'BRONX')</code></h2>
+        </div>
+
+        <div class="slide">
+            <h2>we need to go from</h2>
+            <pre class="prettyprint"><code>var boroughs = ['BROOKLYN', 'BRONX'];</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>we need to go from</h2>
+            <pre class="prettyprint"><code>var boroughs = ['BROOKLYN', 'BRONX'];</code></pre>
+						<h2>to</h2>
+            <pre class="prettyprint"><code>"borough IN ('BROOKLYN', 'BRONX')"</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>push</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>push</code></pre>
+						<h2>adds a value to the end of an array</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var quotedBoroughs = [];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var quotedBoroughs = [];
+boroughs.forEach(function (borough) {
+  quotedBoroughs.push("'" + borough + "'");
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>join</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>join</code></pre>
+            <h2>concatenates items in an array</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var quotedBoroughs = [
+  "'BROOKLYN'",
+  "'BRONX'"
+];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var quotedBoroughs = [
+  "'BROOKLYN'",
+  "'BRONX'"
+];
+quotedBoroughs.join(',');</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-0.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-0.png);">
+            <h2>add event listeners to each checkbox</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-1.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-1.png);">
+            <h2>get the proper borough name for each currently-checked checkbox</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-2.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-js-2.png);">
+            <h2>combine each borough name, adding quotes around them and commas between them</h2>
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 6</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <a href="https://mapbox.com" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>for next time</h2>
+            <a href="https://mapbox.com" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox.png);">
+            <h2>create an account with Mapbox</h2>
+            <a href="https://mapbox.com" class="source">source</a>
+        </div>
+
+    </body>
+</html>

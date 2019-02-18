@@ -1,0 +1,110 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: Events</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Listening for Leaflet events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-map-events">this Glitch project</a> into your Glitch account.</li>
+                    <li>In the JavaScript, listen for more map events and log out the name of the event. For example, copy
+                        <pre><code>map.on('moveend', function () {
+  console.log('moveend');
+});</code></pre>
+                        paste those lines (so the <code>moveend</code> listener still exists) and change <code>moveend</code> in the new listener, like this:
+                        <pre><code>map.on('click', function () {
+  console.log('click');
+});</code></pre>
+                        Don't forget to change what is logged out, too, so you can see which event happened.
+                    </li>
+                    <li>Do the above process until you have five different <a href="https://leafletjs.com/reference-1.3.4.html#map-event">map events</a>. Pay special attention to:
+                        <ul>
+                            <li><code>click</code></li>
+                            <li><code>dblclick</code></li>
+                            <li><code>mousedown</code></li>
+                            <li><code>mouseup</code></li>
+                            <li><code>move</code></li>
+                        </ul>
+                        How do the above events differ from each other?
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Leaflet layer events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/giddy-burn">this Glitch project</a> into your Glitch account.</li>
+                    <li>Note that there is an event listener for clicks on features on the map. View the site and confirm that this works as expected.</li>
+                    <li>Look at the <a href="https://leafletjs.com/reference-1.4.0.html#interactive-layer-click">events available for interactive layers</a> and add simple event listeners for two more. I recommend <code>mouseover</code> and <code>mouseout</code>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Text input events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/horn-chameleon">this Glitch project</a> into your Glitch account.</li>
+                    <li>The text input currently does not work&mdash;all the data is always loaded. In the <code>loadData</code> function, change <code>url</code> to make it load data where <code>complaint_type</code> is equal to the input text. Currently <code>url</code> is defined as:
+                      <pre><code>var url = "https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson";</code></pre>
+                      and we want to add a parameter to the end to make it search for specific <code>complaint_type</code>s:
+                      <pre><code>var url = "https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?complaint_type=" + text;</code></pre>
+
+                    </li>
+                    <li>Verify this works by searching for specific <code>complaint_type</code>s. <code>Rodent</code> and <code>Illegal Parking</code> should both work.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: <code>like</code></h2>
+                <ol>
+                    <li>Continue with the Glitch project from the previous part.</li>
+                    <li>We want to make the search input more flexible using <code>like</code>. For example this will look like this:
+                      <pre><code>$where=lower(complaint_type) like '%rodent%'</code></pre>
+                      Currently your <code>url</code> looks like this:
+                      <pre><code>var url = "https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?complaint_type=" + text;</code></pre>
+                      Replace it with this:
+                      <pre><code>var url = "https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson$where=" + encodeURIComponent("lower(complaint_type) like '%rodent%'");</code></pre>
+                    </li>
+                    <li>Confirm that the above gets data where <code>complaint_type</code> contains <code>rodent</code>.</li>
+                    <li>Make the url more flexible&mdash;instead of always looking for <code>complaint_type</code>s containing <code>rodent</code>, replace <code>rodent</code> with the contents of the <code>text</code> parameter passed to the <code>loadData</code> function.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: <code>forEach</code></h2>
+                <ol>
+                    <li>Create a new <a href="https://glitch.com">Glitch</a> project that is a webpage.</li>
+                    <li>In the JavaScript file, create an array of numbers. For example:
+                        <pre><code>var allTheNumbers = [1, 2, 3, 4.1, 10000000];</code></pre>
+                    </li>
+                    <li>Use <code>forEach</code> to log out each value in the array. For example:
+                        <pre><code>allTheNumbers.forEach(function (number) {
+  // Do something with <strong>number</strong> here
+});</code></pre>
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Checkbox events</h2>
+                <ol>
+                    <li>Remix <a href="https://glitch.com/edit/#!/leaflet-checkboxes">this Glitch project</a> into your Glitch account.</li>
+                    <li>Add checkboxes for the other boroughs. You should only have to change the HTML to make this work.</li>
+                    <li>If you have time, change the HTML and <code>loadData</code> to filter by some of the values in <code>complaint_type</code>.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
