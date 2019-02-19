@@ -1,0 +1,485 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Class 9 | SAVI 780</title>
+        <meta charset="utf-8"> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" />
+
+        <link href="https://fonts.googleapis.com/css?family=Arvo|Alegreya+Sans" rel="stylesheet" type="text/css">
+
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <link href="../css/pig.css" rel="stylesheet" type="text/css" />
+        <link href="../css/base.css" rel="stylesheet" />
+
+        <script src="../js/hammer.min.js"></script>
+        <script src="../js/pig.js"></script>
+    </head>
+    <body>
+
+        <div class="slide">
+            <p>Welcome to Introduction to Interactive Web Mapping, Programming and Design, Class 9</p>
+            <p>This is a web page that can be viewed as slides.</p>
+            <p>→ to move forward</p>
+            <p>← to go back</p>
+            <p>g to view grid</p>
+        </div>
+
+        <div class="slide">
+            <h1>SAVI 780</h1>
+            <p>Introduction to Interactive Web Mapping, Programming and Design</p>
+            <p>Class 9</p>
+        </div>
+
+        <div class="slide">
+            <h2>checkboxes</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-html.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint" style="font-size: 40px;"><code>document.querySelector('.load-data-brooklyn')</code></pre>
+            <h2>works fine when we have one or two buttons</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-simple.png);">
+            <a href="https://glitch.com/edit/#!/futuristic-cough" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>what if we have many checkboxes?</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelector()</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelector<strong>All</strong>()</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelectorAll('.borough-checkbox')</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>document.querySelectorAll('.borough-checkbox')</code></pre>
+            <h2>select all of the elements with class <code>borough-checkbox</code></h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>but <code>addEventListener</code> only works with <em>one element</em></h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>zoomInButton.addEventListener('click', function () {
+  ...
+});</code></pre>
+            <h2>so if we want to add event listeners to many elements, we need to look at each individually</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>forEach</code></pre>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>looks at each element in an array</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/for-each.png);">
+            <h2>calls a function once on each element</h2>
+            <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});
+
+&gt; 2
+&gt; 148
+&gt; 400</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(
+);</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(function (element) {
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>the pattern:</h2>
+            <pre class="prettyprint"><code>var myArray = [];
+
+myArray.forEach(function (element) {
+  // Do something with <strong>element</strong>
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2>I prefer <em>plural</em> names for arrays, <em>singular</em> names for elements</h2>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var numbers = [1, 74, 200];
+
+numbers.forEach(function (number) {
+  console.log(number * 2);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <pre class="prettyprint"><code>var boroughs = [
+  'Bronx',
+  'Brooklyn',
+  'Manhattan'
+];
+
+boroughs.forEach(function (borough) {
+  console.log('Hello ' + borough);
+});</code></pre>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 1</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/checkboxes-walkthrough.png);">
+            <a href="../files/leaflet-checkboxes.html" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>filtering without an API</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-checkboxes-no-api.png);">
+            <a href="https://glitch.com/edit/#!/leaflet-checkboxes-2" class="source">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>making base maps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>most webmaps use raster tiles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>raster tiles are 256 x 256 pixel images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles.gif);">
+            <h2>they use the same <em>zoom</em>, <em>x</em>, and <em>y</em> values, so they're interchangeable</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <h2>each tile is just an image on the internet</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom0.png);">
+            <p style="background: white;">http://a.tile.stamen.com/toner/0/0/0.png</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/openwhatevermap.png);">
+            <a href="http://www.openwhatevermap.xyz/" class="source">openwhatevermap.xyz</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-2.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>as you zoom in, the number of tiles quadruples</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-zoom-3.jpg);">
+            <h2>if you made tiles for all of zoom 18 you'd have nearly <em>billions</em> of images</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/tiles-loading.gif);">
+            <h2>that's why browsers only load what you need to see</h2>
+            <a href="http://maptimeboston.github.io/web-maps-101/#17" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake.jpg);">
+            <h2>if your base map is a cake</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-ingredients.jpg);">
+            <h2>the datasets that go into the base map are the ingredients</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
+            <h2>you might think of raster tiles as slices of a big cake</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/cake-slice.jpg);">
+            <h2>a server somewhere turns the data into images</h2>
+            <a class="source" href="https://smittenkitchen.com/2012/09/roasted-apple-spice-sheet-cake/">source</a>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>so how do you <em>make</em> base maps?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>it depends!</h2>
+        </div>
+
+        <div class="slide">
+            <h2>in theory you can make tiles on your own</h2>
+        </div>
+
+        <div class="slide">
+            <h2>many mapmakers turn to Mapbox</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <a href="https://www.mapbox.com/mapbox-studio/" class="source">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio.png);">
+            <h2>Mapbox provides modified OpenStreetMap data</h2>
+            <h2>raster and vector tiles, but emphasis on vector</h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>creating styles</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-home.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-feature-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-color.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-color-zoom.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-field.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-filter-data.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-studio-publish.png);">
+        </div>
+
+        <div class="slide">
+            <h2>how should we design base maps?</h2>
+        </div>
+
+        <div class="slide">
+            <h2>not too differently from offline maps</h2>
+        </div>
+
+        <div class="slide">
+            <h2>think about:</h2>
+            <ul style="list-style: disc; padding-left: 50px;">
+                <li>scale</li>
+                <li>hierarchy</li>
+                <li>color</li>
+                <li>symbology</li>
+            </ul>
+        </div>
+
+        <div class="slide" style="background-image: url(img/scale.jpg);">
+            <h2>scale</h2>
+        </div>
+
+        <div class="slide">
+            <h2>hierarchy</h2>
+            <p>"Important things must look important, and the most important thing should look the most important."</p>
+            <a class="source" href="http://books.google.com/books?id=vF0Chp0YZn0C">
+                Understanding Different Geographies
+            </a>
+        </div>
+
+        <div class="slide">
+            <h2>color</h2>
+            <p>Think about what the colors you are using mean to the viewer.</p>
+            <p>Use contrast to your advantage.</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/symbols.png);">
+            <h2>symbology</h2>
+            <a class="source" href="http://www.svgopen.org/2008/papers/41-MapViewSVG__an_extension_for_ESRI_GIS_and_Mapping_Software/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2>and consider how your data will look on top of it</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/surging-seas.png);">
+            <a class="source" href="https://ss2.climatecentral.org/#12/40.6211/-73.9170?show=satellite&projections=0-K14_RCP85-SLR&level=9&unit=feet&pois=hide">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/wapo-renters.png);">
+            <a class="source" href="https://www.washingtonpost.com/news/wonk/wp/2016/05/25/how-much-a-decent-apartment-costs-you-in-every-county/?noredirect=on&utm_term=.32ddb5129c24">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/census-hard-to-count.png);">
+            <a class="source" href="http://www.censushardtocountmaps2020.us/">source</a>
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 2</a></h2>
+        </div>
+
+        <div class="slide intermission"></div>
+
+        <div class="slide">
+            <h2>using Mapbox tiles in Leaflet</h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-0.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-1.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-2.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-share-3.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/leaflet-mapbox.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 3</a></h2>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <a class="source" href="https://www.mapbox.com/pricing/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>Mapbox isn't free</h2>
+            <a class="source" href="https://www.mapbox.com/pricing/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>but it has a pretty generous free level</h2>
+            <a class="source" href="https://www.mapbox.com/pricing/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>Glitch refreshes every time you press a key, which adds another map view</h2>
+            <a class="source" href="https://www.mapbox.com/pricing/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-pricing.png);">
+            <h2>you might want to use other tiles than Mapbox when coding</h2>
+            <a class="source" href="https://www.mapbox.com/pricing/">source</a>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-tileset-link.png);">
+            <h2>adding your own data to a Mapbox style</h2>
+        </div>
+
+        <div class="slide">
+            <p>1. Upload data (such as a zipped shapefile)</p>
+            <p>2. Add the tileset to your style</p>
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-upload-tileset.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-add-layer.png);">
+        </div>
+
+        <div class="slide" style="background-image: url(img/mapbox-data-add.png);">
+        </div>
+
+        <div class="slide">
+            <h2><a href="inclass.html" target="_blank">in-class exercise, part 4</a></h2>
+        </div>
+
+    </body>
+</html>

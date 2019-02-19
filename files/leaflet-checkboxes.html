@@ -1,0 +1,155 @@
+<html>
+    <head>
+        <title>Leaflet with checkbox filters</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <script src="https://cdn.rawgit.com/google/code-prettify/master/loader/run_prettify.js"></script>
+        <style>
+        pre.prettyprint {
+            background: white;
+            border: 0;
+            font-size: 14px;
+        }
+        .prettyprint code {
+            background: white;
+        }
+        </style>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>Leaflet with checkbox filters</h1>
+            </header>
+
+            <section>
+                <p>This is a code walkthrough of <a href="https://glitch.com/edit/#!/leaflet-checkboxes">this Glitch project using checkboxes as filters on a Leaflet map</a>. Please open that Glitch project to follow along.</p>
+                <p>The project includes checkboxes and only shows data for the boroughs that are currently checked. View the project and confirm that this is the case.</p>
+            </section>
+
+            <section>
+                <h2>The HTML</h2>
+                <p>First, let's look at the <code>index.html</code> for the project. For the most part this is a standard page that loads the Leaflet library and creates a place for the map to exist. The big difference is we have HTML for the checkboxes:</p>
+                <pre class="prettyprint"><code>&lt;ul class="borough-picker"&gt;
+  &lt;li&gt;
+    &lt;input class="borough-checkbox" type="checkbox" id="bronx" data-borough="BRONX" /&gt;
+    &lt;label for="bronx"&gt;Bronx&lt;/label&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;input class="borough-checkbox" type="checkbox" id="brooklyn" data-borough="BROOKLYN"/&gt;
+    &lt;label for="brooklyn"&gt;Brooklyn&lt;/label&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;</code></pre>
+                <p>Note that each checkbox is in an <code>li</code> element. We do this as they are elements in a list, and we style the <code>ul</code> to remove the default bullets (<code>list-style: none;</code>) in the CSS.</p>
+                <p>The simplest HTML for a checkbox would be:</p>
+                <pre class="prettyprint"><code>&lt;input type="checkbox" /&gt;</code></pre>
+                <p>We add a <code>class</code> so we can select the checkbox:</p>
+                <pre class="prettyprint"><code>&lt;input class="borough-checkbox" type="checkbox" /&gt;</code></pre>
+                <p>...an <code>id</code> so we can refer to it with a label:</p>
+                <pre class="prettyprint"><code>&lt;input class="borough-checkbox" type="checkbox" id="bronx" /&gt;</code></pre>
+                <p>...a <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/label">label</a></code> element that refers to this <code>id</code>:</p>
+                <pre class="prettyprint"><code>&lt;input class="borough-checkbox" type="checkbox" id="bronx" /&gt;
+&lt;label for="bronx"&gt;Bronx&lt;/label&gt;</code></pre>
+                <p>...and finally a <code>data-borough</code> attribute that will be explained in the JavaScript section:</p>
+                <pre class="prettyprint"><code>&lt;input class="borough-checkbox" type="checkbox" id="bronx" data-borough="BRONX" /&gt;
+&lt;label for="bronx"&gt;Bronx&lt;/label&gt;</code></pre>
+            </section>
+
+            <section>
+                <h2>The JavaScript</h2>
+                <p>Now let us turn to the JavaScript. Open <code>script.js</code> and follow along.</p>
+                <p>This code starts with what should by now be familiar&mdash;we initialize a Leaflet map and set the view around NYC. We also set up a base layer. What might be less familiar is one line also near the top of the file:</p>
+                <pre class="prettyprint"><code>var complaintLayer = L.geoJson().addTo(map);</code></pre>
+                <p>This creates an empty GeoJSON layer on the map called <code>complaintLayer</code> to which we will add data later on. We are declaring this variable here so that we have access to it in the rest of our code. If we had created it in a function, it would only be available in that function.</p>
+
+                <section>
+                    <h3>The event listeners</h3>
+                    <p>Now let's look at the very bottom of the file, starting with</p>
+                    <pre class="prettyprint"><code>var boroughCheckboxes = document.querySelectorAll('.borough-checkbox');</code></pre>
+                    <p>This selects all of the elements with the class <code>borough-checkbox</code>. You may be more familiar with <code>document.querySelector()</code>, which only selects one element. We use <code>document.querySelectorAll()</code> because there are multiple checkboxes and we want to do something with each of them. You can test this by viewing the site for the Glitch project (using the <strong>show live</strong> button), opening Developer Tools, going to the console, and typing <code>boroughCheckboxes</code>. You should see two checkboxes as the output. Learn more about <a href="https://developer.mozilla.org/en-US/docs/Web/API/Document/querySelectorAll"><code>querySelectorAll()</code></a> on MDN.</p>
+                    <p>Once we select the checkboxes, we add event listeners to each one. If you're more familiar with selecting elements one at a time, you are more used to adding event listeners one at a time. But we consolidate these here to make the code shorter and to ensure we treat each checkbox exactly the same. In order to do something with each individual checkbox, we use <code>forEach()</code>:</p>
+                    <pre class="prettyprint"><code>boroughCheckboxes.forEach(function (boroughCheckbox) {
+});</code></pre>
+                    <p>In the <code>function</code> that we give to <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/forEach">forEach</a></code>, we can run code on an individual checkbox. We're calling this <code>boroughCheckbox</code> here but as it is the parameter to a function we could call it whatever we like. So let's add event listeners as we are familiar with:</p>
+                    <pre class="prettyprint"><code>boroughCheckboxes.forEach(function (boroughCheckbox) {
+  boroughCheckbox.addEventListener('change', function () {
+    loadData(getCheckedBoroughs());
+  });
+});</code></pre>
+                    <p>That is, for each borough checkbox, add a <code>change</code> event listener that loads the data for the currently checked boroughs.</p>
+                </section>
+
+                <section>
+                    <h3>Getting the checked boroughs</h3>
+                    <p>Okay, but how does <code>getCheckedBoroughs()</code> work? With the site open, go to the Developer Tools Console and type <code>getCheckedBoroughs()</code>. You should see an array of the currently checked boroughs. Try changing which boroughs are checked and running <code>getCheckedBoroughs()</code> again. And what happens if no boroughs are checked?</p>
+                    <p>We do this so that when we ask the API to get data for the checked boroughs we know which boroughs we need to ask for. Let's go through this function line by line:</p>
+                    <pre class="prettyprint"><code>var checkedBoroughs = [];</code></pre>
+                    <p><code>checkedBoroughs</code> is an empty array that we will add the currently checked boroughs to.</p>
+                    <p>We're using <code>forEach</code> on the <code>boroughCheckboxes</code> again:</p>
+                    <pre class="prettyprint"><code>boroughCheckboxes.forEach(function(boroughCheckbox) {
+});</code></pre>
+                    <p>and we can ask each checkbox if it is currently checked using the <code><a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input/checkbox">checked</a></code> attribute on it:</p>
+                    <pre class="prettyprint"><code>boroughCheckboxes.forEach(function(boroughCheckbox) {
+  if (boroughCheckbox.checked) {
+  }
+});</code></pre>
+                    <p>If it is checked, we want to remember that. So we want to add it to the array of <code>checkedBoroughs</code>:</p>
+                    <pre class="prettyprint"><code>boroughCheckboxes.forEach(function(boroughCheckbox) {
+  if (boroughCheckbox.checked) {
+    checkedBoroughs.push(boroughCheckbox.dataset.borough);
+  }
+});</code></pre>
+                    <p>Here we do two potentially unfamiliar things. First, we are using <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/push">push()</a></code>. This function works on an array and adds an element to the end of it. The array begins empty. If the Bronx checkbox is checked, we add that to the array. If the Brooklyn checkbox is checked we add that to the array. If neither are checked, we add neither.</p>
+                    <p>The other slightly weird bit is <code>boroughCheckbox.dataset.borough</code>. HTML elements can have datasets attached to them, and you can get them by selecting the element and asking for the dataset attribute, as we do with</p>
+                    <pre class="prettyprint"><code>boroughCheckbox.dataset</code></pre>
+                    <p>Recall in the HTML, how the checkboxes have <code>data-borough</code> attributes? You can get the value of these attributes using:</p>
+                    <pre class="prettyprint"><code>boroughCheckbox.dataset.borough</code></pre>
+                    <p>Learn more about <a href="https://developer.mozilla.org/en-US/docs/Learn/HTML/Howto/Use_data_attributes">data attributes at MDN</a>.</p>
+                    <p>In this case, the data attribute is a convenience and is not required&mdash;we store the API value here, which is all caps, so we don't have to subject users to "BRONX".</p>
+                </section>
+
+                <section>
+                    <h3>Loading the data</h3>
+                    <p>Finally, let us turn our attention to <code>loadData()</code>. We want to form a URL that will filter 311 complaints to the selected boroughs. Something like:</p>
+                    <pre class="prettyprint"><code>borough IN ('BRONX', 'BROOKLYN')</code></pre>
+                    <p>and this needs to go at the end of an endpoint URL:
+                    <pre class="prettyprint"><code>https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?$limit=100&amp;$where=borough IN ('BRONX', 'BROOKLYN')</code></pre>
+                    <p>From <code>getCheckedBoroughs()</code> we have an array like this:</p>
+                    <pre class="prettyprint"><code>['BRONX', 'BROOKLYN']</code></pre>
+                    <p>We need to format these strings and add them to our URL. We will wrap each borough name in single quotes as needed for the <code>IN</code>. First we create a variable to hold these quoted names:</p>
+                    <pre class="prettyprint"><code>var quotedBoroughs = [];</code></pre>
+                    <p>Then, for each borough name:</p>
+                    <pre class="prettyprint"><code>boroughs.forEach(function (borough) {
+});</code></pre>
+                    <p>we <code>push</code> the quoted borough name:</p>
+                    <pre class="prettyprint"><code>boroughs.forEach(function (borough) {
+  quotedBoroughs.push("'" + borough + "'");
+});</code></pre>
+                    <p>At this stage, <code>quotedBoroughs</code> should look something like this:</p>
+                    <pre class="prettyprint"><code>["'BRONX'", "'BROOKLYN'"]</code></pre>
+                    <p>Feel free to add a <code>console.log(quotedBoroughs)</code> if you want to confirm this.</p>
+                    <p>Now we need to get these quoted boroughs in our URL. Something like (but not quite) this:</p>
+                    <pre class="prettyprint"><code>'https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?$limit=100&amp;$where=borough in(' + quotedBoroughs + ')'</code></pre>
+                    <p>The reason we can't do this is <code>quotedBoroughs</code> is an array. We want to turn the array into one string, and we want the elements in that array separated by commas. Luckily there is a handy function called <code><a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/join">join</a></code> that does just this!</p>
+                    <pre class="prettyprint"><code>["'BRONX'", "'BROOKLYN'"].join(',')</code></pre>
+                    <p>If you try this on the console, you should see one string, with commas between the elements:</p>
+                    <pre class="prettyprint"><code>'BRONX','BROOKLYN'</code></pre>
+                    <p>Try it again with another element or two in the array. <code>join</code> is a function that works on any array, and the string you pass will separate each of the elements in the array.</p>
+                    <p>Armed with <code>join</code>, we can make the URL we need:</p>
+                    <pre class="prettyprint"><code>'https://data.cityofnewyork.us/resource/fhrw-4uyv.geojson?$limit=100&amp;$where=borough in(' + quotedBoroughs.join(',') + ')'</code></pre>
+                    <p>Otherwise, we use <code>fetch</code> as we usually do to load data, then we add it to the <code>complaintLayer</code> that we set up in the beginning of the file.</p>
+                </section>
+
+                <section>
+                  <h3>Further improvements</h3>
+                  <p>If you're curious, look into <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/filter">filter()</a> and <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/map">map()</a>, two functions that we could use when working with arrays above. How do they work? Where might use them?</p>
+                </section>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
