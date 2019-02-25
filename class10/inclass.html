@@ -1,0 +1,80 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: Fetch, Mustache</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Loading two data layers</h2>
+                <ol>
+                    <li>Remix this <a href="https://glitch.com/edit/#!/tranquil-humidity">Glitch site</a> into your account.</li>
+                    <li>Load two other datasets on the map, such as <a href="https://data.cityofnewyork.us/Education/School-Districts/r8nu-ymqj">school districts</a> and <a href="https://data.cityofnewyork.us/Social-Services/311-Service-Requests-from-2010-to-Present/erm2-nwe9/data">311 requests</a>.</li>
+                    <li>Change the order of the datasets on the map.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Mustache templates</h2>
+                <ol>
+                    <li>Remix this <a href="https://glitch.com/edit/#!/mustache-example">Glitch site</a> into your account.</li>
+                    <li>Look at how the Glitch site above stores the template in HTML.</li>
+                    <li>Change the context data and see how the rendered HTML changes.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Mustache templates in Leaflet popups</h2>
+                <ol>
+                    <li>Remix this <a href="https://glitch.com/edit/#!/leaflet-mustache-popups">Glitch site</a> into your account.</li>
+                    <li>Change the popup templates to include the <code>status</code> and <code>resolution_description</code> for the clicked feature.</li>
+                    <li>Add a class to an element in the template and style it.</li>
+                    <li>If there is time, use a different data source and customize the templates for it.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Using leaflet-control-geocoder</h2>
+                <p><a href="https://github.com/perliedman/leaflet-control-geocoder">leaflet-control-geocoder</a> is a plugin that adds a search bar to a Leaflet map where users can search for an address to zoom into. It doesn't deal with your map's data. Let's try adding it to a map here.</p>
+                <ol>
+                    <li>Open <a href="https://github.com/perliedman/leaflet-control-geocoder">leaflet-control-geocoder</a>.</li>
+                    <li>Look for an example in the documentation and open it.</li>
+                    <li>Open a Glitch site of your own that uses Leaflet, or start with <a href="https://glitch.com/edit/#!/leaflet-simple">this minimal Leaflet example</a>.</li>
+                    <li>Using the documentation for leaflet-control-geocoder, add the plugin to the site in Glitch and confirm that you get a search bar as you do in the example.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 5: Using Leaflet.markercluster</h2>
+                <p><a href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a> is a handy plugin that can help make dense point datasets easier to view in Leaflet. Here we'll work from an example of using Leaflet.markercluster to customize it.</p>
+                <ol>
+                    <li>Open <a href="https://github.com/Leaflet/Leaflet.markercluster">Leaflet.markercluster</a>.</li>
+                    <li>Look for an example in the documentation and open it to see what it does.</li>
+                    <li>Start from <a href="https://glitch.com/edit/#!/leaflet-markercluster">this example</a> and change the data that is loaded and added to the markercluster. This could be data you are working with for your project or other data we have looked at in class.</li>
+                    <li>If you have time, look at <a href="https://github.com/Leaflet/Leaflet.markercluster#all-options">the options for L.markerClusterGroup()</a> and try changing some of the options.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 6: Explore Leaflet plugins</h2>
+                <ol>
+                    <li>Look at the <a href="https://leafletjs.com/plugins.html">plugin list for Leaflet</a>.</li>
+                    <li>Follow a few links to plugins that sound interesting to you.</li>
+                    <li>For each plugin, try to find a demo or example page. Is there one? Does the plugin seem useful to you?</li>
+                    <li>Starting from a Glitch site of your own or <a href="https://glitch.com/edit/#!/leaflet-simple">this simple Leaflet site</a>, attempt to use one of the plugins you looked at.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>
