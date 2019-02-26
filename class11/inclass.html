@@ -1,0 +1,72 @@
+<html>
+    <head>
+        <title>In-class Exercise | SAVI 780</title>
+        <link href='https://fonts.googleapis.com/css?family=Arvo|Alegreya Sans' rel='stylesheet' type='text/css'>
+        <link href="../css/pages.css" rel="stylesheet" type="text/css" />
+        <link href="../css/inclass.css" rel="stylesheet" />
+    </head>
+    <body>
+        <main>
+            <header>
+                <a href="..">&larr; SAVI 780</a>
+                <h1>In-class Exercise: GitHub</h1>
+            </header>
+
+            <section>
+                <h2>Part 1: Put a site on GitHub Pages</h2>
+                <p>In this exercise, we'll put a Glitch site online with GitHub Pages. This process is long but we outline the steps here and you can refer to tonight's slides for images showing the process.</p>
+                <ol>
+                    <li>Open <a href="https://github.com/">GitHub</a> and log in if you need to.</li>
+                    <li>Click on the <strong>+</strong> at the top right of the page, then <strong>New Repository</strong>.</li>
+                    <li>Give the repository a name and check <strong>Initialize this repository with a README</strong>.</li>
+                    <li>Under the repository's <strong>Settings</strong>, scroll down to <strong>GitHub Pages</strong> select <strong>master</strong> under <strong>Source</strong>.</li>
+                    <li>Open any Glitch site in your account.</li>
+                    <li>Click on the project name at the top left of the page.</li>
+                    <li>Click <strong>Advanced Options</strong>.</li>
+                    <li>Click <strong>Export to GitHub</strong>. You may have to give Glitch access first.</li>
+                    <li>In the dialog that opens, type your GitHub username, a / and the GitHub repository name from earlier. For example, my GitHub username is <strong>ebrelsford</strong>. If my repository is <strong>leaflet-map-class10</strong>, I would type <strong>ebrelsford/leaflet-map-class10</strong>.</li>
+                    <li>Go back to GitHub and open the repository that you created earlier. Click <strong>Branch</strong>, then <strong>glitch</strong>.</li>
+                    <li>Click <strong>New Pull Request</strong>.</li>
+                    <li>Click <strong>Create pull request</strong>.</li>
+                    <li>On the next page, click <strong>Merge pull request</strong>.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 2: Responsive CSS</h2>
+                <p>Try using media queries to make styles that are dependent on the width of the user's screen.</p>
+                <ol>
+                    <li>Create a new Glitch site or work from an existing one.</li>
+                    <li>Using the code in <a href="https://glitch.com/edit/#!/lime-gateway?path=style.css">this site's CSS</a>, use media queries to change the appearance of your site on smaller screens.</li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 3: Convert shapefiles and KMZs to GeoJSON</h2>
+                <ol>
+                    <li>Download <a href="data/class11data.zip">this week's data</a> and unzip it.</li>
+                    <li>Using QGIS or an online converter like <a href="https://mapshaper.org/">mapshaper</a>, convert
+                        <ul>
+                            <li>Hurricane_Evacuation_Routes.kmz</li>
+                            <li>lisseddata</li>
+                        </ul>
+                        to GeoJSONs.
+                    </li>
+                </ol>
+            </section>
+
+            <section>
+                <h2>Part 4: Filtering in QGIS</h2>
+                <ol>
+                    <li>Open <strong>Bicycle Routes</strong> in QGIS.</li>
+                    <li>Filter the file to only features where <strong>facilitycl</strong> is <strong>III</strong>.</li>
+                    <li>Export as a GeoJSON.</li>
+                </ol>
+            </section>
+
+            <footer>
+                <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/"><img alt="Creative Commons License" style="border-width:0" src="http://i.creativecommons.org/l/by-sa/4.0/88x31.png" /></a><br /><span xmlns:dct="http://purl.org/dc/terms/" property="dct:title">Advanced GIS</span> by <a xmlns:cc="http://creativecommons.org/ns#" href="http://ebrelsford.github.io/" property="cc:attributionName" rel="cc:attributionURL">Eric Brelsford</a> is licensed under a <a rel="license" href="http://creativecommons.org/licenses/by-sa/4.0/">Creative Commons Attribution-ShareAlike 4.0 International License</a>.
+            </footer>
+        </main>
+    </body>
+</html>

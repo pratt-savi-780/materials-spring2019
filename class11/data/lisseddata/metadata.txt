@@ -1,0 +1,1123 @@
+Identification_Information:
+  Citation:
+    Citation_Information:
+      Originator: L.J. Poppe
+      Originator: V.F. Paskevich
+      Publication_Date: 2004
+      Title: LISSEDDATA: Long Island Sound Surficial Sediment Data
+      Edition: 1.0
+      Geospatial_Data_Presentation_Form: vector digital data
+      Series_Information:
+      Publication_Information:
+        Publication_Place: Woods Hole Science Center, Woods Hole, MA
+        Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+      Online_Linkage: http://pubs.usgs.gov/of/2004/of2004-1003/data/seddata/lisseddata.zip
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: L.J. Poppe
+          Originator: V.F. Paskevich
+          Originator: M.S. Moser
+          Originator: M.L. DiGiacomo-Cohen
+          Originator: E.B. Christman
+          Publication_Date: 2004
+          Title: Sidescan Sonar Imagery and Surficial Geologic Interpretation of the Sea Floor off Branford, Connecticut
+          Edition: 1.0
+          Series_Information:
+            Series_Name: Open-File Report
+            Issue_Identification: 2004-1003
+          Publication_Information:
+            Publication_Place: Woods Hole Science Center, Woods Hole, MA
+            Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+          Other_Citation_Details: Data are released via CD-ROM media.  This digital publication may also be available via the web at pubs.usgs.gov
+          Online_Linkage: http://pubs.usgs.gov/of/2004/of2004-1003
+          Online_Linkage: http://woodshole.er.usgs.gov/openfile/of2004-1003
+  Description:
+    Abstract: Many scientific questions and policy issues related to sediments in Long Island Sound require data of historical, regional and interdisciplinary scope. Existent data is often geographically clustered and its references are widely dispersed and not always accessible. Acquisition of new data is expensive and may duplicate previous efforts if a full interpretation of existent data has not occurred. Consequently, the body of existing data needs to be utilized to its maximum so that it can serve as a foundation, baseline, and starting point for further work. An accessible, documented, and simple-to-use compilation of existing data on sediment properties is essential for environmental managers, policy-makers, scientific researchers, and interested members of the public. To this end, we have compiled, edited, and integrated all of the available data on sediment texture and bottom descriptions throughout the Sound in order to produce a regional dataset which will be available to a wide variety of current and potential users. The significant feature of this textural dataset is that it comprehensively contains original data from many heterogeneous sources.
+    Purpose: This ArcView shapefile contains the locations of sediment samples collected and analyzed by a number of organizations, and compiled by the U.S. Geological Survey, Woods Hole Science Center. Distribution of this dataset allows the user to visualize the textural information in a Geographic Information System.
+    Supplemental_Information: This dataset is a subset of the original data set released in Long Island Sound Environmental Studies: U.S. Geological Survey Open-File Report 98-502.
+  Time_Period_of_Content:
+    Time_Period_Information:
+      Range_of_Dates/Times:
+        Beginning_Date: 1931
+        Ending_Date: 1998
+    Currentness_Reference: publication date
+  Status:
+    Progress: Complete
+    Maintenance_and_Update_Frequency: None planned
+  Spatial_Domain:
+    Bounding_Coordinates:
+      West_Bounding_Coordinate: -73.939000
+      East_Bounding_Coordinate: -71.838333
+      North_Bounding_Coordinate: 41.422170
+      South_Bounding_Coordinate: 40.760510
+  Keywords:
+    Theme:
+      Theme_Keyword_Thesaurus: General
+      Theme_Keyword: U.S. Geological Survey
+      Theme_Keyword: USGS
+      Theme_Keyword: Coastal and Marine Geology Program
+      Theme_Keyword: CMGP
+      Theme_Keyword: Woods Hole Science Center
+      Theme_Keyword: National Oceanic and Atmospheric Administration
+      Theme_Keyword: NOAA
+      Theme_Keyword: surficial sediments
+      Theme_Keyword: grain size
+      Theme_Keyword: bottom descriptions
+      Theme_Keyword: lithology
+      Theme_Keyword: gravel
+      Theme_Keyword: sand
+      Theme_Keyword: silt
+      Theme_Keyword: clay
+      Theme_Keyword: grab samples
+      Theme_Keyword: cores
+      Theme_Keyword: seafloor geology
+      Theme_Keyword: sedimentary processes
+      Theme_Keyword: particle-size analysis
+    Place:
+      Place_Keyword_Thesaurus: General
+      Place_Keyword: North America
+      Place_Keyword: United States
+      Place_Keyword: east coast
+      Place_Keyword: northeast
+      Place_Keyword: US Atlantic East Coast
+      Place_Keyword: Atlantic Margin
+      Place_Keyword: Long Island Sound
+      Place_Keyword: Connecticut
+      Place_Keyword: New York
+      Place_Keyword: Rhode Island
+      Place_Keyword: Block Island Sound
+      Place_Keyword: Fishers Island Sound
+      Place_Keyword: Niantic Bay
+      Place_Keyword: New Haven Harbor
+      Place_Keyword: Connecticut River
+      Place_Keyword: Thames River
+      Place_Keyword: Roanoke Point
+      Place_Keyword: Norwalk
+      Place_Keyword: Milford
+  Access_Constraints: None
+  Use_Constraints: Public domain data are freely redistributable with proper metadata and source attribution.  Please recognize the U.S. Geological Survey (USGS) as the originator of this dataset.
+  Point_of_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: U.S. Geological Survey
+        Contact_Person: Lawrence J. Poppe
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: U.S. Geological Survey
+        Address: 384 Woods Hole Road
+        City: Woods Hole
+        State_or_Province: MA
+        Postal_Code: 02543-1598
+        Country: USA
+      Contact_Voice_Telephone: (508) 548-8700 x2314
+      Contact_Facsimile_Telephone: (508) 457-2310
+      Contact_Electronic_Mail_Address: lpoppe@usgs.gov
+  Browse_Graphic:
+    Browse_Graphic_File_Name: lisseddata
+    Browse_Graphic_File_Description: Overview showing the coverage and extent of the Long Island Sound sediment data layer.
+    Browse_Graphic_File_Type: GIF
+  Data_Set_Credit: The U.S. Geological Survey must be referenced as the originator of the dataset in any future products or research derived from these data.
+  Security_Information:
+  Native_Data_Set_Environment: Microsoft Windows 2000 Version 5.1 (Build 2600) Service Pack 1; ESRI ArcCatalog 8.3.0.800
+  Cross_Reference:
+    Citation_Information:
+      Originator: L.J. Poppe
+      Originator: M.E. Hastings
+      Originator: M.L. DiGiacomo-Cohen
+      Originator: F.T. Manheim
+      Originator: Z.J. Mlodzinska
+      Publication_Date: 1998
+      Title: LISTEX / LIS_FINAL - Long Island Sound Surficial Sediment Database
+      Edition: 1.0
+      Geospatial_Data_Presentation_Form: spreadsheet
+      Series_Information:
+        Series_Name: Open-File Report
+        Issue_Identification: 98-502
+      Publication_Information:
+        Publication_Place: Woods Hole Science Center, Woods Hole, MA
+        Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+      Other_Citation_Details: Data are released via CD-ROM media and are available in the Microsoft Excel spreadsheet format.  This digital publication may also be available via the web at pubs.usgs.gov
+      Online_Linkage: http://pubs.usgs.gov/of/of98-502/chapt3/lis_final.xls
+      Online_Linkage: http://pubs.usgs.gov/of/of98-502/chapt3/chpt3.htm#data
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: L.J. Poppe (editor)
+          Originator: C.F. Polloni (editor)
+          Publication_Date: 1998
+          Title: Long Island Sound Environmental Studies
+          Edition: 1.0
+          Series_Information:
+            Series_Name: Open-File Report
+            Issue_Identification: 98-502
+          Publication_Information:
+            Publication_Place: Woods Hole Science Center, Woods Hole, MA
+            Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+          Other_Citation_Details: Data are released via CD-ROM media.  This digital publication may also be available via the web at pubs.usgs.gov
+          Online_Linkage: http://pubs.usgs.gov/of/of98-502/
+  Cross_Reference:
+    Citation_Information:
+      Originator: L.J. Poppe
+      Originator: M.E. Hastings
+      Originator: M.L. DiGiacomo-Cohen
+      Originator: F.T. Manheim
+      Originator: Z.J. Mlodzinska
+      Publication_Date: 1998
+      Title: LISTEX / LIS_FINAL - Long Island Sound Surficial Sediment Database
+      Edition: 1.0
+      Geospatial_Data_Presentation_Form: tabular digital data
+      Series_Information:
+        Series_Name: Open-File Report
+        Issue_Identification: 98-502
+      Publication_Information:
+        Publication_Place: Woods Hole Science Center, Woods Hole, MA
+        Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+      Other_Citation_Details: Data are released via CD-ROM media and are available in a tab delimited ASCII text file.  This digital publication may also be available via the web at pubs.usgs.gov
+      Online_Linkage: http://pubs.usgs.gov/of/of98-502/chapt3/lis_final.txt
+      Online_Linkage: http://pubs.usgs.gov/of/of98-502/chapt3/chpt3.htm#data
+      Online_Linkage: http://pubs.usgs.gov/of/of98-502/
+      Larger_Work_Citation:
+        Citation_Information:
+          Originator: L.J. Poppe (editor)
+          Originator: C.F. Polloni (editor)
+          Publication_Date: 1998
+          Title: Long Island Sound Environmental Studies
+          Edition: 1.0
+          Series_Information:
+            Series_Name: Open-File Report
+            Issue_Identification: 98-502
+          Publication_Information:
+            Publication_Place: Woods Hole Science Center, Woods Hole, MA
+            Publisher: U.S. Geological Survey, Coastal and Marine Geology Program
+          Other_Citation_Details: Data are released via CD-ROM media.  This digital publication may also be available via the web at pubs.usgs.gov
+Data_Quality_Information:
+  Logical_Consistency_Report: No additional checks for topological consistency were performed on this data.
+  Completeness_Report: This data set is a subset of the complete USGS East Coast Sediment Texture Database, described and released via U.S. Geological Survey Open-File Report 98-502, supplemented by all available historical data from other organizations..
+  Positional_Accuracy:
+    Horizontal_Positional_Accuracy:
+      Horizontal_Positional_Accuracy_Report: Samples collected prior to about 1990 were navigated by Line of Sight, Sexton, Radar, and Loran (absolute navigational accuracy about 100 m for Loran); samples collected after 1990 were navigated by Differential GPS (navigational accuracy about 10 m).
+  Lineage:
+    Source_Information:
+      Type_of_Source_Media: Microsoft Excel spreadsheet
+      Source_Citation_Abbreviation: LIS_Final.xls - Published in: L.J. Poppe, M.E. Hastings, M.L. DiGiacomo-Cohen, and Z.J. Mlodzinska, 1998, Surficial Sediment Database: In Poppe, L.J. and Polloni, C. (eds.) Long Island Sound Environmental Studies: U.S. Geological Survey Open-File Report 98-502, Chapter 3, CD-ROM.
+      Source_Contribution: The Excel spreadsheet contains the available data on grain size for the bottom sediments in Long Island Sound  The basic structure of the file is a matrix where records are rows representing individual samples and the columns contain information on sample identification, navigation, classifications, analyzed parameters, and comments.
+    Process_Step:
+      Process_Description:
+        The Excel spreadsheet was edited to change the PHI field names.  The negative PHI values -5 to -1 were changed from PHI-n to PHIMn.  This is because ArcView does not allow the '-' in field names and the field names were automatically changed to 'PHI_n'.  This resulted in duplicate PHI field names. Making the change before exporting the file eliminated the conversion error and fieldname problems.
+        The modified Excel spreadsheet file, usgsecstdb.xls, was exported as an ASCII text file with tab delimited fields.
+      Source_Used_Citation_Abbreviation: lisseddata.xls
+      Process_Date: 2003630
+      Source_Produced_Citation_Abbreviation: lisseddata.txt
+      Process_Contact:
+        Contact_Information:
+          Contact_Person_Primary:
+            Contact_Person: Lawrence J. Poppe
+            Contact_Organization: U.S. Geological Survey
+          Contact_Position: Geologist
+          Contact_Voice_Telephone: (508) 548-8700 x2314
+          Contact_Facsimile_Telephone: (508) 457-2310
+          Contact_Electronic_Mail_Address: lpoppe@usgs.gov
+    Process_Step:
+      Process_Description: The file, usgsecstdb.txt, was imported into ArcView to create a table.  The table was then converted to an ArcView shapefile to be used as a GIS data layer.
+      Source_Used_Citation_Abbreviation: lisseddata.txt
+      Process_Date: 20030701
+      Source_Produced_Citation_Abbreviation: lisseddata.shp
+      Process_Contact:
+        Contact_Information:
+          Contact_Person_Primary:
+            Contact_Person: Lawrence J. Poppe
+            Contact_Organization: U.S. Geological Survey
+          Contact_Position: Geologist
+          Contact_Voice_Telephone: (508) 548-8700 x2314
+          Contact_Facsimile_Telephone: (508) 457-2310
+          Contact_Electronic_Mail_Address: lpoppe@usgs.gov
+Spatial_Data_Organization_Information:
+  Direct_Spatial_Reference_Method: Vector
+  Point_and_Vector_Object_Information:
+    SDTS_Terms_Description:
+      SDTS_Point_and_Vector_Object_Type: Entity point
+      Point_and_Vector_Object_Count: 14621
+Spatial_Reference_Information:
+  Horizontal_Coordinate_System_Definition:
+    Geographic:
+      Latitude_Resolution: 0.000000
+      Longitude_Resolution: 0.000000
+      Geographic_Coordinate_Units: Decimal degrees
+    Geodetic_Model:
+      Horizontal_Datum_Name: North American Datum of 1927
+      Ellipsoid_Name: Clarke 1866
+      Semi-major_Axis: 6378206.400000
+      Denominator_of_Flattening_Ratio: 294.978698
+Entity_and_Attribute_Information:
+  Detailed_Description:
+    Entity_Type:
+      Entity_Type_Label: lisseddata
+      Entity_Type_Definition: Shapefile Attribute Table
+      Entity_Type_Definition_Source: ESRI
+    Attribute:
+      Attribute_Label: FID
+      Attribute_Definition: Internal feature number.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Sequential unique whole numbers that are automatically generated.
+    Attribute:
+      Attribute_Label: Shape
+      Attribute_Definition: Feature geometry.
+      Attribute_Definition_Source: ESRI
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Coordinates defining the features.
+    Attribute:
+      Attribute_Label: SEQUENCE__
+      Attribute_Definition: Sequential identification number, generated by the database (Excel) as the data were entered; gaps in these sequential numbers are present.
+      Attribute_Definition_Source: Compilers
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 1
+          Range_Domain_Maximum: 14974
+          Attribute_Units_of_Measure: sequential count
+          Attribute_Measurement_Resolution: 1.1
+    Attribute:
+      Attribute_Label: USGS_DB_ID
+      Attribute_Definition: Unique identification number (consisting of 2 characters and 3 numerics) generated in the sedimentation laboratory of the USGS's Woods Hole Science Center for the Atlantic Margin Texture Database.
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Characters and numbers
+    Attribute:
+      Attribute_Label: FIELD_ID
+      Attribute_Definition: Sample name or number as assigned in the field
+      Attribute_Definition_Source: Scientists
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Characters and numbers
+    Attribute:
+      Attribute_Label: REQUESTER
+      Attribute_Definition: Name of Principle Investigator or designee requesting analysis from lab
+      Attribute_Definition_Source: Scientists
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String containing the names of scientists (usually first letter of first name and last name
+    Attribute:
+      Attribute_Label: PROJ_NAME
+      Attribute_Definition: Project under which samples were taken, or data generated (i.e. NOS Digital Database); sometimes indicates more specific area
+      Attribute_Definition_Source: Scientists
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character string containg the names of project under which samples were obtained
+    Attribute:
+      Attribute_Label: SOURCE
+      Attribute_Definition: Bibliographic reference in which the data were originally published, or the organization that produced the unpublished data.
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String usually containing the name of the first author and year of publication
+    Attribute:
+      Attribute_Label: AREA
+      Attribute_Definition: General geographic area from where data were obtained.  General enough to easily locate on a state map.
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: LATITUDE
+      Attribute_Definition: Latitude coordinate of sample location
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 40.76051
+          Range_Domain_Maximum: 41.42217
+          Attribute_Units_of_Measure: Decimal degrees
+          Attribute_Measurement_Resolution: variable
+    Attribute:
+      Attribute_Label: LONGITUDE
+      Attribute_Definition: Longitude coordinate of sample location
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -73.939
+          Range_Domain_Maximum: -71.83833
+          Attribute_Units_of_Measure: Decimal degrees
+          Attribute_Measurement_Resolution: variable
+    Attribute:
+      Attribute_Label: DEPTH_M
+      Attribute_Definition: Measured depth of water overlying sediment at sample time, not corrected for tides, in meters
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 2
+          Range_Domain_Maximum: 366
+          Attribute_Units_of_Measure: meters
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: T_DEPTH
+      Attribute_Definition: Top depth of the sample below the sediment-water interface, in cm
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 752
+          Attribute_Units_of_Measure: centimeters
+          Attribute_Measurement_Resolution: 0.5
+    Attribute:
+      Attribute_Label: B_DEPTH
+      Attribute_Definition: Bottom depth of the sample below the sediment-water interface, in cm
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.5
+          Range_Domain_Maximum: 759
+          Attribute_Units_of_Measure: centimeters
+          Attribute_Measurement_Resolution: 0.5
+    Attribute:
+      Attribute_Label: YEAR
+      Attribute_Definition: Calender year sample collected/analyzed
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 1931
+          Range_Domain_Maximum: 1998
+          Attribute_Units_of_Measure: years
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: SMPLNG_DEV
+      Attribute_Definition: Device used to collect the sample
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Enumerated_Domain:
+          Enumerated_Domain_Value: SMITH-MCINTYRE W/CAMERA
+        Enumerated_Domain:
+          Enumerated_Domain_Value: SMITH-MCINTYRE W/OCAMERA
+        Enumerated_Domain:
+          Enumerated_Domain_Value: MIN. VAN VEEN
+        Enumerated_Domain:
+          Enumerated_Domain_Value: VIBRA CORE
+        Enumerated_Domain:
+          Enumerated_Domain_Value: VAN VEEN GRAB
+        Enumerated_Domain:
+          Enumerated_Domain_Value: VISUAL OBSERVATION
+        Enumerated_Domain:
+          Enumerated_Domain_Value: GRAVITY CORER
+        Enumerated_Domain:
+          Enumerated_Domain_Value: GRAB SAMPLER
+        Enumerated_Domain:
+          Enumerated_Domain_Value: PETERSON GRAB
+        Enumerated_Domain:
+          Enumerated_Domain_Value: GRAB SAMPLE
+        Enumerated_Domain:
+          Enumerated_Domain_Value: VIBRA CORER
+    Attribute:
+      Attribute_Label: SIZE_TECH
+      Attribute_Definition: General description of the particle-size analysis techniques used
+      Attribute_Definition_Source: Lab Technician
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: LITHOLOGY
+      Attribute_Definition: General lithologic description
+      Attribute_Definition_Source: Scientist
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: LITH_CODE
+      Attribute_Definition: Numerical code assigned to lithology based on Shepard's (1954) classification scheme
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 1
+          Range_Domain_Maximum: 37
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: SED_CLASS
+      Attribute_Definition: Sediment description based on a rigorous definition based on classification schemes
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: CLASS_SYS
+      Attribute_Definition: Description of the system used for classification or their source
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: CLASS_CODE
+      Attribute_Definition: Classification code number (from NOS Digital Database)
+      Attribute_Definition_Source: NOS
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 548
+          Range_Domain_Maximum: 568
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: GRAVEL_PCT
+      Attribute_Definition: Gravel content in percent dry weight of the sample (particles with nominal diameters greater than 2 mm; -1 phi and larger)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: SAND_PCT
+      Attribute_Definition: Sand content in percent dry weight of the sample (particles with nominal diameters less than 2 mm, but greater than or equal to 0.0625 mm ; 0 phi through 4 phi)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100.49
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: SILT_PCT
+      Attribute_Definition: Silt content in percent dry weight of the sample (particles with nominal diameters less than 0.0625 mm, but greater than or equal to 0.004 mm; 5 phi through 8 phi, inclusive)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 93.2
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CLAY_PCT
+      Attribute_Definition: Clay content in percent dry weight of the sample (particles with nominal diameters less than 0.004 mm; 9 phi and smaller)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 71.89
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: FINES_SIL
+      Attribute_Definition: Percent dry weight of the sample reported in both the silt and clay fractions (i.e. silt plus clay)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 99.68
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: MEDIAN
+      Attribute_Definition: Middle point in the grain size distribution in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5.13
+          Range_Domain_Maximum: 9.4
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: MEAN
+      Attribute_Definition: Average value in the grain size distribution in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5.07
+          Range_Domain_Maximum: 8.61
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: STDEV_SORT
+      Attribute_Definition: Standard deviation (sorting) | Standard deviation (root mean square of the deviations) of the grain size distribution in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.055
+          Range_Domain_Maximum: 5.1
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: SKEWNESS
+      Attribute_Definition: Skewness (deviation from symmetrical form) of the grain size distribution
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -0.85
+          Range_Domain_Maximum: 5.82
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: KURTOSIS
+      Attribute_Definition: Kurtosis (degree of curvature near the mode) of the grain size distribution
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5.2
+          Range_Domain_Maximum: 167.8
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: MODE_1_CLA
+      Attribute_Definition: First mode (particle size that occurs the most number of times) in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5.5
+          Range_Domain_Maximum: 9.5
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.5
+    Attribute:
+      Attribute_Label: MODE_1_STR
+      Attribute_Definition: Modal strength of the first mode in percent
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 11.3
+          Range_Domain_Maximum: 88.9
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: .01
+    Attribute:
+      Attribute_Label: MODE_2_CLA
+      Attribute_Definition: Second mode in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5.5
+          Range_Domain_Maximum: 9.8
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: .5
+    Attribute:
+      Attribute_Label: MODE_2_STR
+      Attribute_Definition: Modal strength of the second mode in percent
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 4.20
+          Range_Domain_Maximum: 39.09
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: MODE_3_CLA
+      Attribute_Definition: Third mode in phi units
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -4.5
+          Range_Domain_Maximum: 9.5
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.5
+    Attribute:
+      Attribute_Label: MODE_3_STR
+      Attribute_Definition: Modal strength of the third mode in percent
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 5.05
+          Range_Domain_Maximum: 15.11
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: NO_OF_MOD
+      Attribute_Definition: Number of modes
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 1
+          Range_Domain_Maximum: 3
+          Attribute_Units_of_Measure: integer count
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: PHI_STEP
+      Attribute_Definition: Phi interval used in analysis (e..g. full phi, half phi)
+      Attribute_Definition_Source: Lab Technician
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.5
+          Range_Domain_Maximum: 1
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 0.5
+    Attribute:
+      Attribute_Label: FROM_PHI
+      Attribute_Definition: Largest particle size measured, in phi units
+      Attribute_Definition_Source: Lab Technician
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -5
+          Range_Domain_Maximum: 4
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: TO_PHI
+      Attribute_Definition: Smallest particle size measured, in phi units
+      Attribute_Definition_Source: Lab Technician
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -4
+          Range_Domain_Maximum: 16
+          Attribute_Units_of_Measure: phi
+          Attribute_Measurement_Resolution: 1
+    Attribute:
+      Attribute_Label: PHIM5
+      Attribute_Definition: Weight percent of the sample in the -5 phi fraction (nominal diameter of particles greater than or equal to 32 mm, but less than 64 mm); very coarse pebbles
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 7.18
+          Range_Domain_Maximum: 57.44
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHIM4
+      Attribute_Definition: Weight percent of the sample in the -4 phi fraction (nominal diameter of particles greater than or equal to 16 mm, but less than 32 mm; coarse pebbles
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 84.40
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHIM3
+      Attribute_Definition: Weight percent of the sample in the -3 phi fraction (nominal diameter of particles greater than or equal to 8 mm, but less than 16 mm); medium pebbles
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 46.74
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHIM2
+      Attribute_Definition: Weight percent of the sample in the -2 phi fraction (nominal diameter of particles greater than or equal to 4 mm, but less than 8 mm); fine pebbles
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 42.27
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHIM1
+      Attribute_Definition: Weight percent of the sample in the -1 phi fraction (nominal diameter of particles greater than or equal to 2 mm, but less than 4 mm); very fine pebbles (granules)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 30.44
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_0
+      Attribute_Definition: Weight percent of the sample in the 0 phi fraction (nominal diameters of particles greater than or equal to 1 mm, but less than 2 mm); very coarse sand
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 51.23
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_1
+      Attribute_Definition: Weight percent of the sample in the 1 phi fraction (nominal diameter of particles greater than or equal to 0.5 mm, but less than 1 mm); coarse sand
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 82.62
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_2
+      Attribute_Definition: Weight percent of the sample in the 2 phi fraction (nominal diameter of particles greater than or equal to 0.25 mm, but less than 0.5 mm); medium sand
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 88.9
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_3
+      Attribute_Definition: Weight percent of the sample in the 3 phi fraction (nominal diameter of particles greater than or equal to 0.125 mm, but less than 0.25 mm); fine sand
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.03
+          Range_Domain_Maximum: 85.40
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_4
+      Attribute_Definition: Weight percent of the sample in the 4 phi fraction (nominal diameters of particles greater than or equal to .0625 mm, but less than 0.125 mm); very fine sand
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 77.73
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_5
+      Attribute_Definition: Weight percent of the sample in the 5 phi fraction (nominal diameter of particles greater than or equal to 0.031 mm, but less than 0.0625 mm); coarse silt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 69.33
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_6
+      Attribute_Definition: Weight percent of the sample in the 6 phi fraction (nominal diameter of particles greater than or equal to 0.016 mm, but less than 0.031 mm); medium silt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 37.99
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_7
+      Attribute_Definition: Weight percent of the sample in the 7 phi fraction (nominal diameter of particles greater than or equal to 0.008 mm, but less than 0.016 mm); fine silt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 27.89
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_8
+      Attribute_Definition: Weight percent of the sample in the 8 phi fraction (nominal diameter of particles greater than or equal to 0.004 mm, but less than 0.008 mm); very fine silt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 24.37
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_9
+      Attribute_Definition: Weight percent of the sample in the 9 phi fraction (nominal diameter of particles greater than or equal to 0.002 mm, but less than 0.004 mm); clay
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: -3.87
+          Range_Domain_Maximum: 34.87
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_10
+      Attribute_Definition: Weight percent of the sample in the 10 phi fraction (nominal diameter of particles greater than or equal to 0.001 mm, but less than 0.002 mm); clay
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.01
+          Range_Domain_Maximum: 37.02
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: PHI_11
+      Attribute_Definition: Weight percent of the sample in the 11 phi fraction (nominal diameter of particles greater than or equal to 0.5 mm, but less than 0.001 mm
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.01
+          Range_Domain_Maximum: 37.02
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP11
+      Attribute_Definition: Cumulative frequency percent of the 11 phi fraction and coarser (less than 0.001 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 72.65
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP10
+      Attribute_Definition: Cumulative frequency percent of the 10 phi fraction and coarser (less than 0.002 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 62.0
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP09
+      Attribute_Definition: Cumulative frequency percent of the 9 phi fraction and coarser (less than 0.004 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 42.8
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP08
+      Attribute_Definition: | Cumulative frequency percent of the 8 phi fraction and coarser (less than 0.008 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 28.11
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP07
+      Attribute_Definition: Cumulative frequency percent of the 7 phi fraction and coarser (less than 0.0016 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 11.82
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP06
+      Attribute_Definition: Cumulative frequency percent of the 6 phi fraction and coarser (less than 0.031 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 6.72
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP05
+      Attribute_Definition: Cumulative frequency percent of the 5 phi fraction and coarser (less than 0.062 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 2.98
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP04
+      Attribute_Definition: Cumulative frequency percent of the 4 phi fraction and coarser (less than 0.125 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.31
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP03
+      Attribute_Definition: Cumulative frequency percent of the 3 phi fraction and coarser (less than 0.250 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 101.17
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP02
+      Attribute_Definition: Cumulative frequency percent of the 2 phi fraction and coarser (less than 0.5 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP01
+      Attribute_Definition: Cumulative frequency percent of the 1 phi fraction and coarser (less than 0.1 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFP00
+      Attribute_Definition: Cumulative frequency percent of the 0 phi fraction and coarser (less than 2 mm)
+      Attribute_Definition_Source: Lab Manage
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFPM1
+      Attribute_Definition: Cumulative frequency percent of the -1 phi fraction and coarser (less than 4 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFPM2
+      Attribute_Definition: Cumulative frequency percent of the -2 phi fraction and coarser (less than 8 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFPM3
+      Attribute_Definition: Cumulative frequency percent -3 phi fraction and coarser (less than 16 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFPM4
+      Attribute_Definition: Cumulative frequency percent  -4 phi fraction and coarser (less than 32 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 100
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: CFPM5
+      Attribute_Definition: Cumulative frequency percent -5 phi fraction and coarser (entire distribution is usually less than 64 mm)
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 57.44
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: ANALYST
+      Attribute_Definition: Name (usually first initial and last name) of person who performed the grain size or physical properties analysis
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: CHN_ANAL
+      Attribute_Definition: Description of the laboratory techniques used for total organic carbon, hydrogen, and (or) nitrogen
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+    Attribute:
+      Attribute_Label: TOC_UNCOR
+      Attribute_Definition: Total organic carbon content in percent dry weight of the bulk sample, uncorrected for salt content
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.03
+          Range_Domain_Maximum: 10.40
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: H_UNCOR
+      Attribute_Definition: Hydrogen content in percent dry weight of the bulk sample, uncorrected for salt content
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 2.85
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: N_UNCOR
+      Attribute_Definition: Nitrogen content in percent dry weight of the bulk sample, uncorrected for salt content
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Some values are reported as less than (<)
+    Attribute:
+      Attribute_Label: C_N
+      Attribute_Definition: Molar organic carbon/nitrogen ratio of the bulk dried sediment
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.155
+          Range_Domain_Maximum: 238.206
+          Attribute_Measurement_Resolution: 0.001
+    Attribute:
+      Attribute_Label: TOC_COR
+      Attribute_Definition: Total organic carbon content in percent dry weight ofthe bulk sample, corrected for salt content
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0.03
+          Range_Domain_Maximum: 17.0
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: H_COR
+      Attribute_Definition: Hydrogen content in percent dry weight of the bulk sample, corrected for salt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Range_Domain:
+          Range_Domain_Minimum: 0
+          Range_Domain_Maximum: 2.88
+          Attribute_Units_of_Measure: percent
+          Attribute_Measurement_Resolution: 0.01
+    Attribute:
+      Attribute_Label: N_COR
+      Attribute_Definition: Nitrogen content in percent dry weight of the bulk sample, corrected for salt
+      Attribute_Definition_Source: Lab Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Some values are reported as less than (<)
+    Attribute:
+      Attribute_Label: COMMENTS
+      Attribute_Definition: Any further information about sediment analysis for all or specific parameters in this table
+      Attribute_Definition_Source: Data Manager
+      Attribute_Domain_Values:
+        Unrepresentable_Domain: Character String
+Distribution_Information:
+  Distributor:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: U.S. Geological Survey
+        Contact_Person: Lawrence J. Poppe
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: U.S. Geological Survey
+        Address: 384 Woods Hole Road
+        City: Woods Hole
+        State_or_Province: MA
+        Postal_Code: 02543-1598
+        Country: USA
+      Contact_Voice_Telephone: (508) 548-8700 x2314
+      Contact_Facsimile_Telephone: (508) 457-2310
+      Contact_Electronic_Mail_Address: lpoppe@usgs.gov
+  Resource_Description: Downloadable Data: lisseddata.shp
+  Distribution_Liability: Although this derived data set and it's lineage dataset have been used by the USGS, no warranty, expressed or implied, is made by the USGS as to the accuracy of the data and/or related materials.  The act of distribution shall not constitute any such warranty, and no responsibility is assumed by the USGS in the use of these data or related materials.
+  Standard_Order_Process:
+    Digital_Form:
+      Digital_Transfer_Information:
+        Format_Name: ArcView shapefile
+        Format_Version_Number: 3.2
+        Format_Specification: ESRI point shapefile
+        Format_Information_Content: Five files (lisseddata.shp, lisseddata.dbf, lisseddata.shx, lisseddata.sbn, lisseddata.sbx)
+        File_Decompression_Technique: no compression applied
+        Transfer_Size: 16.311
+  Technical_Prerequisites:
+    The data are available in the ESRI shapefile format. The user must have Environmental Systems Research Institute's (ESRI) ArcView 3.0 or greater or ArcGIS software to read and process the data file. In lieu of Arcview, the user may utilize another GIS application package capable of importing the data.  A free GIS data viewer, ArcExplorer, is available from the ESRI website at www.esri.com/software/arcexplorer/download4.html
+
+    Access to the data and information contained on this CD-ROM was developed using the HyperText Markup Language (HTML) utilized by the World Wide Web (WWW) project. Development of the CD-ROM documentation and user interface in HTML allows a user to access the information by using a variety of WWW information browsers to facilitate browsing and locating information and data.  To access the information contained on this disk with a WWW client browser, open the file 'index.htm' at the top level directory of this CD-ROM with your selected browser.
+
+    This CD-ROM should be readable by a variety of operating systems including Windows 95/98/NT, Macintosh and UNIX.
+  Available_Time_Period:
+    Time_Period_Information:
+      Single_Date/Time:
+        Calendar_Date: 2003
+Metadata_Reference_Information:
+  Metadata_Date: 20040216
+  Metadata_Contact:
+    Contact_Information:
+      Contact_Organization_Primary:
+        Contact_Organization: U.S. Geological Survey
+        Contact_Person: Lawrence J. Poppe
+      Contact_Position: Geologist
+      Contact_Address:
+        Address_Type: mailing and physical address
+        Address: U.S. Geological Survey
+        Address: 384 Woods Hole Road
+        City: Woods Hole
+        State_or_Province: MA
+        Postal_Code: 02543-1598
+        Country: USA
+      Contact_Voice_Telephone: (508) 548-8700 x2314
+      Contact_Facsimile_Telephone: (508) 457-2310
+      Contact_Electronic_Mail_Address: lpoppe@usgs.gov
+  Metadata_Standard_Name: FGDC Content Standards for Digital Geospatial Metadata
+  Metadata_Standard_Version: FGDC-STD-001-1998
+  Metadata_Time_Convention: local time
+  Metadata_Access_Constraints: None
+  Metadata_Use_Constraints: None
